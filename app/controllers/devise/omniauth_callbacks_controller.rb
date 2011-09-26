@@ -1,4 +1,4 @@
-class Devise::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def facebook
     # You need to implement the method below in your model
