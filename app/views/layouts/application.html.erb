@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EChamp</title>
+    <%= stylesheet_link_tag :all %>
+    <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "jquery-1.6.min", "jquery/jquery.selectbox-0.1.2.min" %>
+    <%= javascript_include_tag "tiny_mce/tiny_mce", "mce_init" %>
+  </head>
+  <body>
+    <div style="float: left;width:300px;">
+    <% unless current_user.blank? %>  
+      <%= link_to "Events", "/events" %>
+      <%= link_to "Profile", "/profiles/show" %>
+      <%= link_to "Sign Out", "/sign_out" %>
+    <% else %>
+      <%= link_to "Sign In", "/sign_in" %> |
+    <% end %>
+  </div>
+  <div style="width:150px;float: left;border-right: 1px solid white; border-color: white; margin-right: 0pt;">
+    Search
+  </div>
+  <div class="search_top">
+    <form action="/search">
+      <input class="search" name="q"/>
+    </form>
+  </div>
+
+  <%= yield %>
+
+</body>
+</html>
