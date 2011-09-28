@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(:version => 20110927234226) do
   end
 
   create_table "events_attendees", :force => true do |t|
+    t.integer  "attendee_id"
+    t.integer  "event_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

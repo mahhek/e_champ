@@ -7406,3 +7406,66 @@ Started GET "/tickets/6" for 127.0.0.1 at 2011-09-28 06:53:46 +0500
   [1m[35mTicket Load (1.0ms)[0m  SELECT `tickets`.* FROM `tickets` WHERE `tickets`.`id` = 6 LIMIT 1
 Rendered tickets/show.html.erb within layouts/application (283.0ms)
 Completed 200 OK in 400ms (Views: 306.0ms | ActiveRecord: 2.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/hamid/e_champ/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /home/hamid/e_champ/config/environment.rb:5)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (6.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (4.4ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20110628165433)
+  [1m[35mSQL (3.6ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `authentication_token` varchar(255), `name` varchar(255), `user_name` varchar(255), `company_name` varchar(255), `receive_emails` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[35mSQL (5.6ms)[0m  CREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW KEYS FROM `users`[0m
+  [1m[35mSQL (6.6ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110628165433')[0m
+Migrating to CreateServices (20110703075854)
+  [1m[35mSQL (3.6ms)[0m  CREATE TABLE `services` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `provider` varchar(255), `uid` varchar(255), `uname` varchar(255), `uemail` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110703075854')[0m
+Migrating to CreateRoles (20110924052036)
+  [1m[35mSQL (3.9ms)[0m  CREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110924052036')[0m
+Migrating to CreateRolesUser (20110924052350)
+  [1m[35mSQL (2.9ms)[0m  CREATE TABLE `roles_users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `role_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110924052350')[0m
+Migrating to CreateProfiles (20110924052638)
+  [1m[35mSQL (3.5ms)[0m  CREATE TABLE `profiles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `hometown` varchar(255), `interests` text, `education` text, `biography` text, `photo_file_name` varchar(255), `photo_content_type` varchar(255), `photo_file_size` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110924052638')[0m
+Migrating to CreateEvents (20110924053139)
+  [1m[35mSQL (2.7ms)[0m  CREATE TABLE `events` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `name` varchar(255), `description` text, `number_of_events` int(11), `start_date` date, `end_date` date, `restrictions` text, `location` varchar(255), `address` varchar(255), `web_address` varchar(255), `number_of_tickets` int(11), `ticket_type` varchar(255), `max_order_tickets` int(11), `keywords` text, `discount_code` varchar(255), `qr_code` varchar(255), `group_event` tinyint(1), `video_link` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110924053139')[0m
+Migrating to CreateTickets (20110925122119)
+  [1m[35mSQL (14.9ms)[0m  CREATE TABLE `tickets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `event_id` int(11), `cost` int(11), `type` varchar(255), `attendee` varchar(255), `barcode` text, `design` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110925122119')[0m
+Migrating to CreateEventsAttendees (20110925124801)
+  [1m[35mSQL (12.0ms)[0m  CREATE TABLE `events_attendees` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `attendee_id` int(11), `event_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110925124801')[0m
+Migrating to CreateAttendees (20110927234226)
+  [1m[35mSQL (3.8ms)[0m  CREATE TABLE `attendees` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `contact_number` varchar(255), `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110927234226')[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mdescribe `attendees`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `attendees`
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `events`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `events`
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `events_attendees`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `events_attendees`
+  [1m[36mSQL (0.6ms)[0m  [1mdescribe `profiles`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `profiles`
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `roles`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `roles`
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `roles_users`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `roles_users`
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `services`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `services`
+  [1m[36mSQL (0.6ms)[0m  [1mdescribe `tickets`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `tickets`
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `users`
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/hamid/e_champ/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /home/hamid/e_champ/config/environment.rb:5)
