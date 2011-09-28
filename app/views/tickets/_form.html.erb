@@ -19,17 +19,18 @@
     <%= f.label :type %><br />
     <%= f.text_field :type %>
   </div>
-  <div class="field">
-    <%= f.label :attendee %><br />
-    <%= f.text_field :attendee %>
-  </div>
-  <div class="field">
-    <%= f.label :barcode %><br />
-    <%= f.text_area :barcode %>
-  </div>
+  <%#*<div class="field">%>
+    <%#= f.label :attendee %><br />
+    <%#= f.text_field :attendee %>
+  <%#*</div>%>
+  <%#*<div class="field">%>
+    <%#= f.label :barcode %><br />
+    <%#= f.text_area :barcode %>
+  <%#*</div>%>
   <div class="field">
     <%= f.label :design %><br />
-    <%= f.text_field :design %>
+    <%= f.select "design", "<option value='custom'>Custom</option><option value='standard'>Standard</option>" %>
+    <%#= f.text_field :design %>
   </div>
   <div class="actions">
     <%= f.submit %>

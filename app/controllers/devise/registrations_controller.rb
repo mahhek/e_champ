@@ -13,6 +13,7 @@ class Devise::RegistrationsController < ApplicationController
 
   # POST /resource
   def create
+    @roles = Role.find(:all, :conditions => "name != 'Admin'")    
     build_resource
 
     if resource.save

@@ -100,8 +100,12 @@
 <% if is_admin? || (is_promoter?) %>
   <%= link_to 'Edit', edit_event_path(@event) %> |
 <% end %>
-<%= link_to 'Back', events_path %> |
-<%= link_to "Print", "javascript:;", :onclick => "print_ticket('#{@event.id}')" %>
+<%= link_to 'Back', events_path %> 
+<% if @event.attendees.size < @event.number_of_tickets.to_i %>
+  |
+  <%= link_to 'Tickets', "/tickets?e_id=#{@event.id}" %>
+<% end %>
+<%#= link_to "Print", "javascript:;", :onclick => "print_ticket('#{@event.id}')" %>
 
 
 <script type="text/javascript">

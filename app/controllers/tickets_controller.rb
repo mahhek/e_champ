@@ -3,14 +3,23 @@ class TicketsController < ApplicationController
   # GET /tickets.xml
   before_filter :authenticate_user!, :except => ["show"]
   before_filter :check_profile
-  before_filter :check_permissions, :only => [:edit,:new, :create,:destroy]
+#  before_filter :check_permissions, :only => [:edit,:new, :create,:destroy]
 
   def index
-    @tickets = Ticket.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @tickets }
+    unless params[:e_id].blank?
+      @tickets = Ticket.all(:conditions => ["event_id = ?",params[:e_id]])
+      if @ticket.blank?
+        flash[:notice] = "No Tickets available for this Event!"
+        redirect_to :controller => "events", :action => "index"
+      else
+        respond_to do |format|
+          format.html # index.html.erb
+          format.xml  { render :xml => @tickets }
+        end
+      end
+    else
+      flash[:notice] = "Please choose an event first!"
+      redirect_to :controller => "events", :action => "index"
     end
   end
 
@@ -28,6 +37,7 @@ class TicketsController < ApplicationController
   # GET /tickets/new
   # GET /tickets/new.xml
   def new
+    session[:eve_id] = params[:e_id]
     @ticket = Ticket.new
 
     respond_to do |format|
@@ -44,16 +54,32 @@ class TicketsController < ApplicationController
   # POST /tickets
   # POST /tickets.xml
   def create
-    @ticket = Ticket.new(params[:ticket])
-
-    respond_to do |format|
-      if @ticket.save
-        format.html { redirect_to(@ticket, :notice => 'Ticket was successfully created.') }
-        format.xml  { render :xml => @ticket, :status => :created, :location => @ticket }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @ticket.errors, :status => :unprocessable_entity }
+    params[:ticket][:event_id] = session[:eve_id]
+    params[:ticket][:user_id] = current_user.id
+    event = Event.find(session[:eve_id])
+    unless event.blank?
+      i = 0
+      err = false
+      while i < event.number_of_tickets.to_i  do
+        @ticket = Ticket.new(params[:ticket])
+        i +=1;
+        unless @ticket.save
+          err = true
+        end
       end
+
+      respond_to do |format|
+        if err == false
+          format.html { redirect_to(@ticket, :notice => 'Ticket was successfully created.') }
+          format.xml  { render :xml => @ticket, :status => :created, :location => @ticket }
+        else
+          format.html { render :action => "new" }
+          format.xml  { render :xml => @ticket.errors, :status => :unprocessable_entity }
+        end
+      end
+    else
+      flash[:error] = "Tickets can't be generated for the event. Please try again or later."
+      redirect_to :controller => "events", :action => "index"
     end
   end
 

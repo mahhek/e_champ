@@ -5113,3 +5113,2296 @@ Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-26 19:32:33 +0500
 Rendered devise/shared/_links.erb (4.0ms)
 Rendered devise/registrations/new.html.erb within layouts/application (39.6ms)
 Completed 200 OK in 305ms (Views: 48.3ms | ActiveRecord: 0.4ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at D:/ROR Projs/e_champ/config/environment.rb:5)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/e_champ/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/e_champ/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-27 09:24:08 +0500
+
+Mysql::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (107.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (157.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-27 09:25:03 +0500
+
+Mysql::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at D:/ROR Projs/e_champ/config/environment.rb:5)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/e_champ/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/e_champ/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-27 09:28:35 +0500
+  Processing by HomeController#index as HTML
+Completed   in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 09:28:44 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 535ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-27 09:28:52 +0500
+  Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mRole Load (154.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name != 'Admin')[0m
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (113.0ms)
+Completed 200 OK in 1052ms (Views: 158.0ms | ActiveRecord: 154.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-09-27 09:29:09 +0500
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UngV+mXNY/TMFv7uaraWW+WWMnKRXZkH7PFuZ51teTA=", "user"=>{"email"=>"noumankhalid786@gmail.com", "name"=>"nouman", "user_name"=>"nouman", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "company_name"=>"nouman"}, "role_id"=>"2", "commit"=>"Sign up"}
+  [1m[35mSQL (1.0ms)[0m  BEGIN
+  [1m[36mSQL (37.0ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'noumankhalid786@gmail.com') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  ROLLBACK
+Rendered devise/registrations/new.html.erb within layouts/application (192.0ms)
+Completed 500 Internal Server Error in 828ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.map):
+    23:         <%= f.password_field :password_confirmation %></p>
+    24: 
+    25:       <p><%= "Sign Up As" %><br />
+    26:         <%= select_tag( "role_id" , options_from_collection_for_select(@roles, :id, :name))%>
+    27:       </p>
+    28: 
+    29:       <p><%= f.label :company_name %><br />
+  app/views/devise/registrations/new.html.erb:26:in `block in _app_views_devise_registrations_new_html_erb___106670552_52445232_353018327'
+  app/views/devise/registrations/new.html.erb:7:in `_app_views_devise_registrations_new_html_erb___106670552_52445232_353018327'
+  app/controllers/devise/registrations_controller.rb:32:in `block in create'
+  app/controllers/devise/registrations_controller.rb:32:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-09-27 09:30:15 +0500
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UngV+mXNY/TMFv7uaraWW+WWMnKRXZkH7PFuZ51teTA=", "user"=>{"email"=>"noumankhalid786@gmail.com", "name"=>"nouman", "user_name"=>"nouman", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "company_name"=>"nouman"}, "role_id"=>"2", "commit"=>"Sign up"}
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name != 'Admin')[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'noumankhalid786@gmail.com') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  ROLLBACK
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 293ms (Views: 54.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-09-27 09:32:07 +0500
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UngV+mXNY/TMFv7uaraWW+WWMnKRXZkH7PFuZ51teTA=", "user"=>{"email"=>"noumankhalid786@gmail.com", "name"=>"nouman", "user_name"=>"nouman", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "company_name"=>"nouman"}, "role_id"=>"2", "commit"=>"Sign up"}
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name != 'Admin')[0m
+  [1m[35mSQL (1.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'noumankhalid786@gmail.com') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`confirmation_token` = 'AshEzKskp1z5sKD25xhW' LIMIT 1[0m
+  [1m[35mSQL (3.0ms)[0m  describe `users`
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO `users` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `authentication_token`, `name`, `user_name`, `company_name`, `receive_emails`, `created_at`, `updated_at`) VALUES ('noumankhalid786@gmail.com', '$2a$10$pu1mRwFQ7Ry42uA/pwNhXezB4JnVYoENy.ZKYkEAbrCK/1WjmFnme', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 'AshEzKskp1z5sKD25xhW', NULL, '2011-09-27 04:32:07', NULL, 'nouman', 'nouman', 'nouman', NULL, '2011-09-27 04:32:07', '2011-09-27 04:32:07')[0m
+Rendered devise/mailer/confirmation_instructions.html.erb (1.0ms)
+
+Sent mail to noumankhalid786@gmail.com (1510ms)
+Date: Tue, 27 Sep 2011 09:32:09 +0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: noumankhalid786@gmail.com
+Message-ID: <4e8151c9eb1a_16c8258780c2354d@nouman-PC.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome noumankhalid786@gmail.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=AshEzKskp1z5sKD25xhW">Confirm my account</a></p>
+  [1m[35mSQL (107.0ms)[0m  COMMIT
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  BEGIN
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `roles_users`[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO `roles_users` (`role_id`, `user_id`, `created_at`, `updated_at`) VALUES (2, 1, '2011-09-27 04:32:10', '2011-09-27 04:32:10')
+  [1m[36mSQL (27.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3568ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-27 09:32:10 +0500
+  Processing by HomeController#index as HTML
+Completed   in 33ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 09:32:10 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 143ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-27 09:38:10 +0500
+  Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name != 'Admin')
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 123ms (Views: 75.0ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/e_champ/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/e_champ/config/environment.rb:5)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-27 09:39:23 +0500
+  Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name != 'Admin')[0m
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (239.0ms)
+Completed 200 OK in 873ms (Views: 264.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-09-27 09:39:54 +0500
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UngV+mXNY/TMFv7uaraWW+WWMnKRXZkH7PFuZ51teTA=", "user"=>{"email"=>"noumankhalid786@gmail.com", "name"=>"nouman", "user_name"=>"nouman", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "company_name"=>"nouman"}, "role_id"=>"3", "commit"=>"Sign up"}
+  [1m[35mRole Load (1.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name != 'Admin')
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'noumankhalid786@gmail.com') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`confirmation_token` = 'DscBpZq3crcoiqJUJmCJ' LIMIT 1
+  [1m[36mSQL (2.0ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO `users` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `authentication_token`, `name`, `user_name`, `company_name`, `receive_emails`, `created_at`, `updated_at`) VALUES ('noumankhalid786@gmail.com', '$2a$10$LbTDeCVXz4CNf.XtSVB2X.zhXmrJB12E5Miw5trOhMZ8fk.TuW2NG', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 'DscBpZq3crcoiqJUJmCJ', NULL, '2011-09-27 04:39:55', NULL, 'nouman', 'nouman', 'nouman', NULL, '2011-09-27 04:39:55', '2011-09-27 04:39:55')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.0ms)
+
+Sent mail to noumankhalid786@gmail.com (42516ms)
+Date: Tue, 27 Sep 2011 09:39:56 +0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: noumankhalid786@gmail.com
+Message-ID: <4e81539c84cb4_14a02758f5c8089b@nouman-PC.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome noumankhalid786@gmail.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=DscBpZq3crcoiqJUJmCJ">Confirm my account</a></p>
+  [1m[36mSQL (72.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mRole Load (1.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE `roles`.`id` = 3 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.0ms)[0m  describe `roles_users`
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO `roles_users` (`role_id`, `user_id`, `created_at`, `updated_at`) VALUES (3, 1, '2011-09-27 04:40:38', '2011-09-27 04:40:38')[0m
+  [1m[35mSQL (45.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 44644ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-27 09:40:39 +0500
+  Processing by HomeController#index as HTML
+Completed   in 30ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 09:40:39 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 93ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-27 09:43:52 +0500
+  Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name != 'Admin')[0m
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (105.0ms)
+Completed 200 OK in 188ms (Views: 130.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-09-27 09:47:39 +0500
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UngV+mXNY/TMFv7uaraWW+WWMnKRXZkH7PFuZ51teTA=", "user"=>{"email"=>"noumankhalid786@gmail.com", "name"=>"nouman", "user_name"=>"nouman", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "company_name"=>"nouman"}, "role_id"=>"3", "commit"=>"Sign up"}
+  [1m[35mRole Load (1.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name != 'Admin')
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'noumankhalid786@gmail.com') LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`confirmation_token` = 'XNXoQKqWGM2PF6anh1M3' LIMIT 1[0m
+  [1m[35mSQL (3.0ms)[0m  describe `users`
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO `users` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `authentication_token`, `name`, `user_name`, `company_name`, `receive_emails`, `created_at`, `updated_at`) VALUES ('noumankhalid786@gmail.com', '$2a$10$pf/4nsTS2mfqLvTqMJuZg.ax1WIgfJ848YU7zAGzv7sPVKu1sWFxy', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 'XNXoQKqWGM2PF6anh1M3', NULL, '2011-09-27 04:47:39', NULL, 'nouman', 'nouman', 'nouman', NULL, '2011-09-27 04:47:39', '2011-09-27 04:47:39')[0m
+Rendered devise/mailer/confirmation_instructions.html.erb (1.0ms)
+
+Sent mail to noumankhalid786@gmail.com (42039ms)
+Date: Tue, 27 Sep 2011 09:47:39 +0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: noumankhalid786@gmail.com
+Message-ID: <4e81556bd3879_14a02726418809a6@nouman-PC.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome noumankhalid786@gmail.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=XNXoQKqWGM2PF6anh1M3">Confirm my account</a></p>
+  [1m[35mSQL (64.0ms)[0m  COMMIT
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (3.0ms)[0m  [1mdescribe `roles_users`[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO `roles_users` (`role_id`, `user_id`, `created_at`, `updated_at`) VALUES (3, 1, '2011-09-27 04:48:22', '2011-09-27 04:48:22')
+  [1m[36mSQL (43.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 42640ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-27 09:48:22 +0500
+  Processing by HomeController#index as HTML
+Completed   in 94ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 09:48:22 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 170ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/e_champ/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/e_champ/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-27 20:38:07 +0500
+  Processing by HomeController#index as HTML
+Completed   in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 20:38:19 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 971ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-27 20:45:10 +0500
+  Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mRole Load (181.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name != 'Admin')[0m
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (76.0ms)
+Completed 200 OK in 1229ms (Views: 108.0ms | ActiveRecord: 181.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-09-27 20:48:06 +0500
+  Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mRole Load (1.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name != 'Admin')
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 201ms (Views: 89.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-09-27 20:48:30 +0500
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UngV+mXNY/TMFv7uaraWW+WWMnKRXZkH7PFuZ51teTA=", "user"=>{"email"=>"noumankhalid786@gmail.com", "name"=>"nouman", "user_name"=>"nouman", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "company_name"=>"nouman"}, "role_id"=>"3", "commit"=>"Sign up"}
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name != 'Admin')[0m
+  [1m[35mSQL (49.0ms)[0m  BEGIN
+  [1m[36mSQL (17.0ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'noumankhalid786@gmail.com') LIMIT 1[0m
+  [1m[35mSQL (38.0ms)[0m  ROLLBACK
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 849ms (Views: 71.0ms | ActiveRecord: 104.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2011-09-27 20:48:40 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (4.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 538ms (Views: 104.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-27 20:48:46 +0500
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UngV+mXNY/TMFv7uaraWW+WWMnKRXZkH7PFuZ51teTA=", "user"=>{"user_name"=>"nouman", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+DEPRECATION WARNING: It seems that you are using a custom SessionsController. In order for it to work from Devise 1.4.6 forward, you need to add the following:
+
+  prepend_before_filter :allow_params_authentication!, :only => :create
+
+This will ensure your controller can authenticate from params for the create action. (called from create at D:/ROR Projs/e_champ/app/controllers/devise/sessions_controller.rb:14)
+  [1m[36mSQL (42.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_name` = 'nouman' LIMIT 1
+Completed   in 436ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UngV+mXNY/TMFv7uaraWW+WWMnKRXZkH7PFuZ51teTA=", "user"=>{"user_name"=>"nouman", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered devise/shared/_links.erb (4.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 289ms (Views: 81.0ms | ActiveRecord: 43.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-27 20:49:11 +0500
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UngV+mXNY/TMFv7uaraWW+WWMnKRXZkH7PFuZ51teTA=", "user"=>{"user_name"=>"nouman", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+DEPRECATION WARNING: It seems that you are using a custom SessionsController. In order for it to work from Devise 1.4.6 forward, you need to add the following:
+
+  prepend_before_filter :allow_params_authentication!, :only => :create
+
+This will ensure your controller can authenticate from params for the create action. (called from create at D:/ROR Projs/e_champ/app/controllers/devise/sessions_controller.rb:14)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_name` = 'nouman' LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mAREL (1.0ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2011-09-27 15:49:12', `current_sign_in_at` = '2011-09-27 15:49:12', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2011-09-27 15:49:12' WHERE `users`.`id` = 1[0m
+  [1m[35mSQL (79.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 812ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-27 20:49:12 +0500
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (20.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (92.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+Redirected to http://localhost:3000/profiles/new
+Completed 302 Found in 870ms
+
+
+Started GET "/profiles/new" for 127.0.0.1 at 2011-09-27 20:49:13 +0500
+  Processing by ProfilesController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered profiles/_form.html.erb (3.0ms)
+Rendered profiles/new.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 636ms
+
+ActionView::Template::Error (No expansion found for :ckeditor):
+    1: <%= javascript_include_tag :ckeditor %>
+    2: <%= form_for(@profile) do |f| %>
+    3:   <% if @profile.errors.any? %>
+    4:     <div id="error_explanation">
+  app/views/profiles/_form.html.erb:1:in `_app_views_profiles__form_html_erb__144130889_39625608__575001590'
+  app/views/profiles/new.html.erb:3:in `_app_views_profiles_new_html_erb__571199264_39636648_788342535'
+  app/controllers/profiles_controller.rb:32:in `new'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (27.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (84.0ms)
+
+
+Started GET "/profiles/new" for 127.0.0.1 at 2011-09-27 20:49:43 +0500
+  Processing by ProfilesController#new as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered profiles/_form.html.erb (172.0ms)
+Rendered profiles/new.html.erb within layouts/application (190.0ms)
+Completed 200 OK in 325ms (Views: 222.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2011-09-27 20:51:12 +0500
+  Processing by ProfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UngV+mXNY/TMFv7uaraWW+WWMnKRXZkH7PFuZ51teTA=", "profile"=>{"hometown"=>"lahore", "interests"=>"<p>adasd</p>", "education"=>"<p>asdasd</p>", "biography"=>"<p>asdasd</p>", "photo"=>"Chrysanthemum.jpg"}, "commit"=>"Create Profile"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (7.0ms)[0m  [1mdescribe `profiles`[0m
+  [1m[35mAREL (65.0ms)[0m  INSERT INTO `profiles` (`user_id`, `hometown`, `interests`, `education`, `biography`, `photo_file_name`, `photo_content_type`, `photo_file_size`, `created_at`, `updated_at`) VALUES (1, 'lahore', '<p>adasd</p>', '<p>asdasd</p>', '<p>asdasd</p>', NULL, NULL, NULL, '2011-09-27 15:51:12', '2011-09-27 15:51:12')
+[paperclip] Saving attachments.
+  [1m[36mSQL (55.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/profiles/2
+Completed 302 Found in 530ms
+
+
+Started GET "/profiles/2" for 127.0.0.1 at 2011-09-27 20:51:13 +0500
+  Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Rendered profiles/show.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 307ms (Views: 89.0ms | ActiveRecord: 130.0ms)
+
+
+Started GET "/profiles/show" for 127.0.0.1 at 2011-09-27 20:53:51 +0500
+  Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Rendered profiles/show.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 280ms
+
+ActionView::Template::Error (undefined method `hometown' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <b>Hometown:</b>
+    5:   <%= @profile.hometown %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/profiles/show.html.erb:5:in `_app_views_profiles_show_html_erb___611569781_41788860_788342535'
+  app/controllers/profiles_controller.rb:21:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (33.0ms)
+
+
+Started GET "/profiles/show" for 127.0.0.1 at 2011-09-27 20:54:59 +0500
+  Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[35mUser Load (3.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Redirected to http://localhost:3000/profiles/new
+Completed 500 Internal Server Error in 203ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/profiles_controller.rb:24:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (58.0ms)
+
+
+Started GET "/profiles/show" for 127.0.0.1 at 2011-09-27 20:54:59 +0500
+  Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Redirected to http://localhost:3000/profiles/new
+Completed 500 Internal Server Error in 133ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/profiles_controller.rb:24:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.0ms)
+
+
+Started GET "/profiles/show" for 127.0.0.1 at 2011-09-27 20:55:19 +0500
+  Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Redirected to http://localhost:3000/profiles/new
+Completed 302 Found in 114ms
+
+
+Started GET "/profiles/new" for 127.0.0.1 at 2011-09-27 20:55:20 +0500
+  Processing by ProfilesController#new as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+ERROR: compiling _app_views_profiles__form_html_erb__144130889_34028316__575001590 RAISED D:/ROR Projs/e_champ/app/views/profiles/_form.html.erb:1: syntax error, unexpected ')'
+... {:multipart => true} )do |f| );@output_buffer.safe_concat('
+...                               ^
+D:/ROR Projs/e_champ/app/views/profiles/_form.html.erb:47: syntax error, unexpected keyword_ensure, expecting ')'
+D:/ROR Projs/e_champ/app/views/profiles/_form.html.erb:49: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_profiles__form_html_erb__144130889_34028316__575001590(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "profiles/_form";_old_output_buffer = @output_buffer;form = local_assigns[:form];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append= ( form_for(@profile,:html => {:multipart => true} )do |f| );@output_buffer.safe_concat('
+');   if @profile.errors.any? 
+@output_buffer.safe_concat('    <div id="error_explanation">
+      <h2>');@output_buffer.append= ( pluralize(@profile.errors.count, "error") );@output_buffer.safe_concat(' prohibited this profile from being saved:</h2>
+
+      <ul>
+');@output_buffer.append_if_string=          @profile.errors.full_messages.each do |msg| 
+@output_buffer.safe_concat('          <li>');@output_buffer.append= ( msg );@output_buffer.safe_concat('</li>
+');         end 
+@output_buffer.safe_concat('      </ul>
+    </div>
+');   end 
+@output_buffer.safe_concat('
+  <div class="field">
+    ');@output_buffer.append= ( f.label :hometown );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :hometown );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :interests );@output_buffer.safe_concat('<br />
+    <textarea name="profile[interests]" class="mceEditor" rows="3" cols="50" >
+      ');@output_buffer.append= ( raw(@profile.interests) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </textarea>
+  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :education );@output_buffer.safe_concat('<br />
+    <textarea name="profile[education]" class="mceEditor" rows="3" cols="50" >
+      ');@output_buffer.append= ( raw(@profile.education) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </textarea>    
+  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :biography );@output_buffer.safe_concat('<br />  
+    <textarea name="profile[biography]" class="mceEditor" rows="3" cols="50" >
+      ');@output_buffer.append= ( raw(@profile.biography) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </textarea>
+  </div>
+
+  <div class="field">
+    ');@output_buffer.append= ( "Profile Picture" );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.file_field :photo );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+
+  <div class="actions">
+    ');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_view/template.rb:258:in `module_eval'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_view/template.rb:258:in `compile'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_view/template.rb:134:in `block in render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.10/lib/active_support/notifications.rb:54:in `instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_view/template.rb:127:in `render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_view/render/partials.rb:333:in `render_partial'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_view/render/partials.rb:262:in `block in render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.10/lib/active_support/notifications.rb:52:in `block in instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.10/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.10/lib/active_support/notifications.rb:52:in `instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_view/render/partials.rb:260:in `render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_view/render/partials.rb:378:in `_render_partial'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_view/render/rendering.rb:31:in `render'
+D:/ROR Projs/e_champ/app/views/profiles/new.html.erb:3:in `_app_views_profiles_new_html_erb__571199264_34037904_788342535'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_view/template.rb:135:in `block in render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.10/lib/active_support/notifications.rb:54:in `instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_view/template.rb:127:in `render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.10/lib/active_support/notifications.rb:52:in `block in instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.10/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.10/lib/active_support/notifications.rb:52:in `instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_view/render/rendering.rb:56:in `_render_template'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_view/render/rendering.rb:26:in `render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/abstract_controller/rendering.rb:115:in `_render_template'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/abstract_controller/rendering.rb:93:in `render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_controller/metal/rendering.rb:17:in `render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.10/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+C:/Ruby192/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.10/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.10/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_controller/metal/instrumentation.rb:39:in `render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_controller/metal/mime_responds.rb:192:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+D:/ROR Projs/e_champ/app/controllers/profiles_controller.rb:36:in `new'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/abstract_controller/base.rb:150:in `process_action'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_controller/metal/rendering.rb:11:in `process_action'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.10/lib/active_support/callbacks.rb:441:in `_run__393566900__process_action__204559628__callbacks'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.10/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.10/lib/active_support/callbacks.rb:94:in `run_callbacks'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/abstract_controller/callbacks.rb:17:in `process_action'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_controller/metal/rescue.rb:17:in `process_action'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.10/lib/active_support/notifications.rb:52:in `block in instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.10/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.10/lib/active_support/notifications.rb:52:in `instrument'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/abstract_controller/base.rb:119:in `process'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/abstract_controller/rendering.rb:41:in `process'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_controller/metal.rb:138:in `dispatch'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_controller/metal.rb:178:in `block in action'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/routing/route_set.rb:62:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/routing/route_set.rb:27:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/routing/route_set.rb:493:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/oa-core-0.1.6/lib/omniauth/strategy.rb:50:in `call_app!'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/oa-core-0.1.6/lib/omniauth/strategy.rb:32:in `call!'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/oa-core-0.1.6/lib/omniauth/strategy.rb:19:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/oa-core-0.1.6/lib/omniauth/builder.rb:30:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/warden-1.0.5/lib/warden/manager.rb:35:in `block in call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/warden-1.0.5/lib/warden/manager.rb:34:in `catch'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/warden-1.0.5/lib/warden/manager.rb:34:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/head.rb:14:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.4/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/flash.rb:182:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.10/lib/active_record/query_cache.rb:32:in `block in call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.10/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.10/lib/active_record/query_cache.rb:12:in `cache'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.10/lib/active_record/query_cache.rb:31:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.10/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.10/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.4/lib/rack/sendfile.rb:106:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.10/lib/rails/rack/logger.rb:13:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.4/lib/rack/runtime.rb:17:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.10/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.4/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.4/lib/rack/lock.rb:11:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/static.rb:30:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.10/lib/rails/application.rb:168:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.10/lib/rails/application.rb:77:in `method_missing'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.10/lib/rails/rack/log_tailer.rb:14:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.4/lib/rack/content_length.rb:13:in `call'
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.4/lib/rack/handler/webrick.rb:52:in `service'
+C:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+C:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+C:/Ruby192/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered profiles/_form.html.erb (24.0ms)
+Rendered profiles/new.html.erb within layouts/application (33.0ms)
+Completed 500 Internal Server Error in 223ms
+
+ActionView::Template::Error (D:/ROR Projs/e_champ/app/views/profiles/_form.html.erb:1: syntax error, unexpected ')'
+... {:multipart => true} )do |f| );@output_buffer.safe_concat('
+...                               ^
+D:/ROR Projs/e_champ/app/views/profiles/_form.html.erb:47: syntax error, unexpected keyword_ensure, expecting ')'
+D:/ROR Projs/e_champ/app/views/profiles/_form.html.erb:49: syntax error, unexpected keyword_end, expecting ')'):
+    1: <%= form_for(@profile,:html => {:multipart => true} )do |f| %>
+    2:   <% if @profile.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+  app/views/profiles/new.html.erb:3:in `_app_views_profiles_new_html_erb__571199264_34037904_788342535'
+  app/controllers/profiles_controller.rb:36:in `new'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (34.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (210.0ms)
+
+
+Started GET "/profiles/new" for 127.0.0.1 at 2011-09-27 20:55:45 +0500
+  Processing by ProfilesController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered profiles/_form.html.erb (29.0ms)
+Rendered profiles/new.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 338ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2011-09-27 20:56:01 +0500
+  Processing by ProfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UngV+mXNY/TMFv7uaraWW+WWMnKRXZkH7PFuZ51teTA=", "profile"=>{"hometown"=>"lahore", "interests"=>"<p>asd</p>", "education"=>"<p>asd</p>", "biography"=>"<p>asda</p>", "photo"=>#<ActionDispatch::Http::UploadedFile:0x6446370 @original_filename="Chrysanthemum.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"profile[photo]\"; filename=\"Chrysanthemum.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/Users/nouman/AppData/Local/Temp/RackMultipart20110927-8908-yd1mbh>>}, "commit"=>"Create Profile"}
+  [1m[35mUser Load (2.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.0ms)[0m  describe `profiles`
+  [1m[36mAREL (2.0ms)[0m  [1mINSERT INTO `profiles` (`user_id`, `hometown`, `interests`, `education`, `biography`, `photo_file_name`, `photo_content_type`, `photo_file_size`, `created_at`, `updated_at`) VALUES (1, 'lahore', '<p>asd</p>', '<p>asd</p>', '<p>asda</p>', 'Chrysanthemum.jpg', 'image/jpeg', 879394, '2011-09-27 15:56:06', '2011-09-27 15:56:06')[0m
+[paperclip] Saving attachments.
+[paperclip] saving D:/ROR Projs/e_champ/public/system/photos/1/original/Chrysanthemum.jpg
+[paperclip] saving D:/ROR Projs/e_champ/public/system/photos/1/thumb/Chrysanthemum.jpg
+[paperclip] saving D:/ROR Projs/e_champ/public/system/photos/1/small/Chrysanthemum.jpg
+  [1m[35mSQL (38.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/profiles/1
+Completed 302 Found in 5290ms
+
+
+Started GET "/profiles/1" for 127.0.0.1 at 2011-09-27 20:56:06 +0500
+  Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (20.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+Rendered profiles/show.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 393ms (Views: 134.0ms | ActiveRecord: 70.0ms)
+
+
+Started GET "/profiles/1" for 127.0.0.1 at 2011-09-27 20:59:27 +0500
+  Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (2.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+Rendered profiles/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 130ms (Views: 37.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/system/photos/1/Chrysanthemum.jpg" for 127.0.0.1 at 2011-09-27 20:59:28 +0500
+
+ActionController::RoutingError (No route matches "/system/photos/1/Chrysanthemum.jpg"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/system/photos/1/Chrysanthemum.jpg" for 127.0.0.1 at 2011-09-27 20:59:28 +0500
+
+ActionController::RoutingError (No route matches "/system/photos/1/Chrysanthemum.jpg"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/system/photos/1/Chrysanthemum.jpg" for 127.0.0.1 at 2011-09-27 20:59:33 +0500
+
+ActionController::RoutingError (No route matches "/system/photos/1/Chrysanthemum.jpg"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/profiles/system/photos/1/Chrysanthemum.jpg" for 127.0.0.1 at 2011-09-27 20:59:42 +0500
+
+ActionController::RoutingError (No route matches "/profiles/system/photos/1/Chrysanthemum.jpg"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/system/photos/1/Chrysanthemum.jpg" for 127.0.0.1 at 2011-09-27 20:59:46 +0500
+
+ActionController::RoutingError (No route matches "/system/photos/1/Chrysanthemum.jpg"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/profiles/pu/system/photos/1/Chrysanthemum.jpg" for 127.0.0.1 at 2011-09-27 20:59:48 +0500
+
+ActionController::RoutingError (No route matches "/profiles/pu/system/photos/1/Chrysanthemum.jpg"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/profiles/public/system/photos/1/Chrysanthemum.jpg" for 127.0.0.1 at 2011-09-27 20:59:48 +0500
+
+ActionController::RoutingError (No route matches "/profiles/public/system/photos/1/Chrysanthemum.jpg"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/public/system/photos/1/Chrysanthemum.jpg" for 127.0.0.1 at 2011-09-27 20:59:50 +0500
+
+ActionController::RoutingError (No route matches "/public/system/photos/1/Chrysanthemum.jpg"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/profiles/1" for 127.0.0.1 at 2011-09-27 21:03:38 +0500
+  Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (1.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+Rendered profiles/show.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 206ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::PATH_DIR):
+    22: 
+    23: <p>
+    24:   <b>Profile Picture:</b>
+    25:   <img src="<%= PATH_DIR %>/system/photos/<%= @profile.id %>/<%= @profile.photo_file_name %>" alt="Profile Pic"/>
+    26: </p>
+    27: 
+    28: 
+  app/views/profiles/show.html.erb:25:in `_app_views_profiles_show_html_erb___611569781_38669280_788342535'
+  app/controllers/profiles_controller.rb:24:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.0ms)
+
+
+Started GET "/profiles/1" for 127.0.0.1 at 2011-09-27 21:03:49 +0500
+  Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (0.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from _app_views_profiles_show_html_erb___611569781_34027452_788342535 at D:/ROR Projs/e_champ/app/views/profiles/show.html.erb:25)
+Rendered profiles/show.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 166ms (Views: 48.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/profiles/1" for 127.0.0.1 at 2011-09-27 21:04:48 +0500
+  Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (0.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+Rendered profiles/show.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 226ms (Views: 46.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/profiles/photos/1/thumb/Chrysanthemum.jpg" for 127.0.0.1 at 2011-09-27 21:05:44 +0500
+
+ActionController::RoutingError (No route matches "/profiles/photos/1/thumb/Chrysanthemum.jpg"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/photos/1/thumb/Chrysanthemum.jpg" for 127.0.0.1 at 2011-09-27 21:05:46 +0500
+
+ActionController::RoutingError (No route matches "/photos/1/thumb/Chrysanthemum.jpg"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/profiles/photos/1/thumb/Chrysanthemum.jpg" for 127.0.0.1 at 2011-09-27 21:05:49 +0500
+
+ActionController::RoutingError (No route matches "/profiles/photos/1/thumb/Chrysanthemum.jpg"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/profiles/1" for 127.0.0.1 at 2011-09-27 21:09:21 +0500
+  Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (0.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+Rendered profiles/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 116ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profiles/1" for 127.0.0.1 at 2011-09-27 21:09:56 +0500
+  Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (0.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+Rendered profiles/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 130ms (Views: 33.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/profiles/1" for 127.0.0.1 at 2011-09-27 21:11:30 +0500
+  Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (1.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+Rendered profiles/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 193ms (Views: 45.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/profiles/1" for 127.0.0.1 at 2011-09-27 21:12:59 +0500
+  Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (1.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+Redirected to http://localhost:3000/profiles/new
+Completed 302 Found in 125ms
+
+
+Started GET "/profiles/new" for 127.0.0.1 at 2011-09-27 21:12:59 +0500
+  Processing by ProfilesController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered profiles/_form.html.erb (21.0ms)
+Rendered profiles/new.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 199ms (Views: 62.0ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2011-09-27 21:13:11 +0500
+  Processing by ProfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UngV+mXNY/TMFv7uaraWW+WWMnKRXZkH7PFuZ51teTA=", "profile"=>{"hometown"=>"asda", "interests"=>"<p>sasd</p>", "education"=>"<p>asda</p>", "biography"=>"<p>asdasd</p>", "photo"=>#<ActionDispatch::Http::UploadedFile:0x6583a88 @original_filename="Chrysanthemum.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"profile[photo]\"; filename=\"Chrysanthemum.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:C:/Users/nouman/AppData/Local/Temp/RackMultipart20110927-8908-14c5rdd>>}, "commit"=>"Create Profile"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.0ms)[0m  describe `profiles`
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO `profiles` (`user_id`, `hometown`, `interests`, `education`, `biography`, `photo_file_name`, `photo_content_type`, `photo_file_size`, `created_at`, `updated_at`) VALUES (1, 'asda', '<p>sasd</p>', '<p>asda</p>', '<p>asdasd</p>', 'Chrysanthemum.jpg', 'image/jpeg', 879394, '2011-09-27 16:13:13', '2011-09-27 16:13:13')[0m
+[paperclip] Saving attachments.
+[paperclip] saving D:/ROR Projs/e_champ/public/images/photos/1/original/Chrysanthemum.jpg
+[paperclip] saving D:/ROR Projs/e_champ/public/images/photos/1/thumb/Chrysanthemum.jpg
+[paperclip] saving D:/ROR Projs/e_champ/public/images/photos/1/small/Chrysanthemum.jpg
+  [1m[35mSQL (40.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/profiles/1
+Completed 302 Found in 1815ms
+
+
+Started GET "/profiles/1" for 127.0.0.1 at 2011-09-27 21:13:13 +0500
+  Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (0.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+Rendered profiles/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 170ms (Views: 45.0ms | ActiveRecord: 44.0ms)
+
+
+Started GET "/sign_out" for 127.0.0.1 at 2011-09-27 21:17:43 +0500
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 316ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-27 21:17:44 +0500
+  Processing by HomeController#index as HTML
+Completed   in 62ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 21:17:45 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (5.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 219ms (Views: 91.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2011-09-27 21:17:47 +0500
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2011-09-27 21:18:03 +0500
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/e_champ/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/e_champ/config/environment.rb:5)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 21:30:27 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (5.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (310.0ms)
+Completed 200 OK in 471ms (Views: 420.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/twitter-signin" for 127.0.0.1 at 2011-09-27 21:30:45 +0500
+
+ActionController::RoutingError (No route matches "/images/twitter-signin"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/images/twitter-signin" for 127.0.0.1 at 2011-09-27 21:30:46 +0500
+
+ActionController::RoutingError (No route matches "/images/twitter-signin"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 21:31:16 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 254ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-09-27 21:31:20 +0500
+
+
+Started GET "/auth/twitter/callback?oauth_token=ZHPhTAVEuAhhzkZEW6c8WSAcxORfjQOTI9npPlL9M&oauth_verifier=a1H31QRYbdXWXXO4hpFrWMcT5dVPGvw20AqVzX0GX8" for 127.0.0.1 at 2011-09-27 21:31:58 +0500
+  Processing by ServicesController#create as HTML
+  Parameters: {"oauth_token"=>"ZHPhTAVEuAhhzkZEW6c8WSAcxORfjQOTI9npPlL9M", "oauth_verifier"=>"a1H31QRYbdXWXXO4hpFrWMcT5dVPGvw20AqVzX0GX8", "service"=>"twitter"}
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mService Load (67.0ms)[0m  SELECT `services`.* FROM `services` WHERE `services`.`provider` = 'twitter' AND `services`.`uid` = '330011188' LIMIT 1
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 1271ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 21:32:03 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (4.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 158ms (Views: 67.0ms | ActiveRecord: 68.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-09-27 21:33:47 +0500
+
+
+Started GET "/auth/twitter/callback?oauth_token=qzX8nNha0ehtMAZSNj8H4avZu3jlEm3nrwQucIBCMI&oauth_verifier=WKT2jB2n8XYNzbFkBa6agbBQDdCGzlFKLOcXyVis" for 127.0.0.1 at 2011-09-27 21:33:52 +0500
+  Processing by ServicesController#create as HTML
+  Parameters: {"oauth_token"=>"qzX8nNha0ehtMAZSNj8H4avZu3jlEm3nrwQucIBCMI", "oauth_verifier"=>"WKT2jB2n8XYNzbFkBa6agbBQDdCGzlFKLOcXyVis", "service"=>"twitter"}
+  [1m[36mService Load (1.0ms)[0m  [1mSELECT `services`.* FROM `services` WHERE `services`.`provider` = 'twitter' AND `services`.`uid` = '330011188' LIMIT 1[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 69ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 21:33:55 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (5.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 265ms (Views: 79.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-09-27 21:34:03 +0500
+
+
+Started GET "/auth/twitter/callback?oauth_token=uXUO68YkCbB9F3LfdKcIDKslTCcn5FSJQPVNfmAg&oauth_verifier=p67IhEzuf2vCNLNFIZoGnITBmY3vt75XHxLvEBnhI" for 127.0.0.1 at 2011-09-27 21:34:05 +0500
+  Processing by ServicesController#create as HTML
+  Parameters: {"oauth_token"=>"uXUO68YkCbB9F3LfdKcIDKslTCcn5FSJQPVNfmAg", "oauth_verifier"=>"p67IhEzuf2vCNLNFIZoGnITBmY3vt75XHxLvEBnhI", "service"=>"twitter"}
+  [1m[35mService Load (1.0ms)[0m  SELECT `services`.* FROM `services` WHERE `services`.`provider` = 'twitter' AND `services`.`uid` = '330011188' LIMIT 1
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 94ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 21:34:08 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (4.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 180ms (Views: 83.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-09-27 21:34:17 +0500
+  Processing by Devise::SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 65ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-27 21:34:17 +0500
+  Processing by HomeController#index as HTML
+Completed   in 57ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 21:34:17 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (5.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 221ms (Views: 105.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-09-27 21:34:22 +0500
+
+
+Started GET "/auth/twitter/callback?oauth_token=qVTe2QQkQ80uottOBD7gAArOs58X7OwUyiExsnFQM&oauth_verifier=6IJ11T05zd9D3Dil6os9nYTWxLu4ITDZFk3Dsg9cks" for 127.0.0.1 at 2011-09-27 21:34:25 +0500
+  Processing by ServicesController#create as HTML
+  Parameters: {"oauth_token"=>"qVTe2QQkQ80uottOBD7gAArOs58X7OwUyiExsnFQM", "oauth_verifier"=>"6IJ11T05zd9D3Dil6os9nYTWxLu4ITDZFk3Dsg9cks", "service"=>"twitter"}
+  [1m[36mService Load (1.0ms)[0m  [1mSELECT `services`.* FROM `services` WHERE `services`.`provider` = 'twitter' AND `services`.`uid` = '330011188' LIMIT 1[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 90ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 21:34:29 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (5.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 193ms (Views: 87.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-09-27 21:35:49 +0500
+
+
+Started GET "/auth/twitter/callback?oauth_token=ReKrdT7z3uksS58Xu6zV6t2tpbKr6cfbE4IFX3cxas&oauth_verifier=bgZazHq703cYXRYnyg6PELEQtgDDM82JExUffeCs" for 127.0.0.1 at 2011-09-27 21:36:04 +0500
+  Processing by ServicesController#create as HTML
+  Parameters: {"oauth_token"=>"ReKrdT7z3uksS58Xu6zV6t2tpbKr6cfbE4IFX3cxas", "oauth_verifier"=>"bgZazHq703cYXRYnyg6PELEQtgDDM82JExUffeCs", "service"=>"twitter"}
+Completed 500 Internal Server Error in 12ms
+
+NameError (undefined local variable or method `puaaa' for #<ServicesController:0x58be6a0>):
+  app/controllers/services_controller.rb:40:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (22.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (50.0ms)
+
+
+Started GET "/auth/twitter/callback?oauth_token=ReKrdT7z3uksS58Xu6zV6t2tpbKr6cfbE4IFX3cxas&oauth_verifier=bgZazHq703cYXRYnyg6PELEQtgDDM82JExUffeCs" for 127.0.0.1 at 2011-09-27 21:36:16 +0500
+
+
+Started GET "/auth/failure?message=invalid_credentials" for 127.0.0.1 at 2011-09-27 21:36:18 +0500
+
+ActionController::RoutingError (No route matches "/auth/failure"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-27 21:37:00 +0500
+  Processing by HomeController#index as HTML
+Completed   in 64ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 21:37:00 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (6.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 329ms (Views: 127.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-09-27 21:38:46 +0500
+
+
+Started GET "/auth/twitter/callback?oauth_token=rgu8QxYMFDD680GeJuobsJn9PRWMwNgnwzFEJfxJE&oauth_verifier=jaRrY3gGgYZjV7eXNulqH2TvmMrH0edO0VC07sTNUYI" for 127.0.0.1 at 2011-09-27 21:39:00 +0500
+  Processing by ServicesController#create as HTML
+  Parameters: {"oauth_token"=>"rgu8QxYMFDD680GeJuobsJn9PRWMwNgnwzFEJfxJE", "oauth_verifier"=>"jaRrY3gGgYZjV7eXNulqH2TvmMrH0edO0VC07sTNUYI", "service"=>"twitter"}
+  [1m[35mService Load (1.0ms)[0m  SELECT `services`.* FROM `services` WHERE `services`.`provider` = 'twitter' AND `services`.`uid` = '330011188' LIMIT 1
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 199ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 21:39:03 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (6.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 460ms (Views: 200.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-09-27 21:42:12 +0500
+
+
+Started GET "/auth/twitter/callback?oauth_token=u3IIDqyAhHrwDu8kCeVzc7dsmwzXNN1Ua2rteyyceM&oauth_verifier=l3C4y1LeSI7wtyjqQcXSYyIlR94LGKx8Ol6ysoHmaA" for 127.0.0.1 at 2011-09-27 21:42:24 +0500
+
+SyntaxError (D:/ROR Projs/e_champ/app/controllers/services_controller.rb:94: syntax error, unexpected keyword_else, expecting keyword_end):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (41.0ms)
+
+
+Started GET "/images/Astrology-Logo.jpg" for 127.0.0.1 at 2011-09-27 21:43:00 +0500
+
+ActionController::RoutingError (No route matches "/images/Astrology-Logo.jpg"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/media/Red-Handed-Instrumental.mp3" for 127.0.0.1 at 2011-09-27 21:43:00 +0500
+
+ActionController::RoutingError (No route matches "/media/Red-Handed-Instrumental.mp3"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/images/Title.jpg" for 127.0.0.1 at 2011-09-27 21:43:02 +0500
+
+ActionController::RoutingError (No route matches "/images/Title.jpg"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/images/Houses.jpg" for 127.0.0.1 at 2011-09-27 21:43:02 +0500
+
+ActionController::RoutingError (No route matches "/images/Houses.jpg"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/media/MediaMaker_Welcome.mp3" for 127.0.0.1 at 2011-09-27 21:43:02 +0500
+
+ActionController::RoutingError (No route matches "/media/MediaMaker_Welcome.mp3"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/images/Astrology-Logo.jpg" for 127.0.0.1 at 2011-09-27 21:43:03 +0500
+
+ActionController::RoutingError (No route matches "/images/Astrology-Logo.jpg"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/images/Constellations.jpg" for 127.0.0.1 at 2011-09-27 21:43:03 +0500
+
+ActionController::RoutingError (No route matches "/images/Constellations.jpg"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-27 21:43:05 +0500
+  Processing by HomeController#index as HTML
+Completed   in 60ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 21:43:05 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (5.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 207ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-09-27 21:43:08 +0500
+
+
+Started GET "/auth/twitter/callback?oauth_token=yFJS9ghMyNTfgPQOYGNubfRokiiC6V1KehnMn3vUI&oauth_verifier=dkppoWYcUkGoifz6XUM2LsRbYaGPxs2ETAqVdUWCCo" for 127.0.0.1 at 2011-09-27 21:43:19 +0500
+  Processing by ServicesController#create as HTML
+  Parameters: {"oauth_token"=>"yFJS9ghMyNTfgPQOYGNubfRokiiC6V1KehnMn3vUI", "oauth_verifier"=>"dkppoWYcUkGoifz6XUM2LsRbYaGPxs2ETAqVdUWCCo", "service"=>"twitter"}
+  [1m[36mService Load (0.0ms)[0m  [1mSELECT `services`.* FROM `services` WHERE `services`.`provider` = 'twitter' AND `services`.`uid` = '330011188' LIMIT 1[0m
+Completed 500 Internal Server Error in 568ms
+
+NameError (undefined local variable or method `aa' for #<ServicesController:0x51b3550>):
+  app/controllers/services_controller.rb:92:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (19.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (52.0ms)
+
+
+Started GET "/auth/twitter/callback?oauth_token=yFJS9ghMyNTfgPQOYGNubfRokiiC6V1KehnMn3vUI&oauth_verifier=dkppoWYcUkGoifz6XUM2LsRbYaGPxs2ETAqVdUWCCo" for 127.0.0.1 at 2011-09-27 21:44:15 +0500
+
+
+Started GET "/auth/failure?message=invalid_credentials" for 127.0.0.1 at 2011-09-27 21:44:17 +0500
+
+ActionController::RoutingError (No route matches "/auth/failure"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-27 21:44:21 +0500
+  Processing by HomeController#index as HTML
+Completed   in 57ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 21:44:21 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (4.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 234ms (Views: 83.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-09-27 21:44:24 +0500
+
+
+Started GET "/auth/twitter/callback?oauth_token=eSuXyOdon6poGoEO3L8LqbubNFtkzQDW8wYdw0mWs&oauth_verifier=9VB1skAUwUUW7gOddjZvy7W6rzhxSqm8UDhNCoJHQ4" for 127.0.0.1 at 2011-09-27 21:44:36 +0500
+
+SyntaxError (D:/ROR Projs/e_champ/app/controllers/services_controller.rb:120: syntax error, unexpected keyword_end, expecting $end):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-27 21:45:30 +0500
+  Processing by HomeController#index as HTML
+Completed   in 117ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 21:45:30 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (4.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 259ms (Views: 94.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-09-27 21:45:34 +0500
+
+
+Started GET "/auth/twitter/callback?oauth_token=l2gZX8uhhHJOi3vaxJe9aHTy5VnFpejzr2Fx7vXViA&oauth_verifier=XlMroBLy7g6UDJegomyY28JoD0ltkBSFvw47c4wTzk" for 127.0.0.1 at 2011-09-27 21:45:51 +0500
+  Processing by ServicesController#create as HTML
+  Parameters: {"oauth_token"=>"l2gZX8uhhHJOi3vaxJe9aHTy5VnFpejzr2Fx7vXViA", "oauth_verifier"=>"XlMroBLy7g6UDJegomyY28JoD0ltkBSFvw47c4wTzk", "service"=>"twitter"}
+  [1m[35mService Load (2.0ms)[0m  SELECT `services`.* FROM `services` WHERE `services`.`provider` = 'twitter' AND `services`.`uid` = '330011188' LIMIT 1
+  [1m[36mUser Load (20.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'visitor@a.com' LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes: fullname
+  [1m[35mSQL (1.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'visitor@a.com') LIMIT 1[0m
+  [1m[35mSQL (6.0ms)[0m  describe `users`
+  [1m[36mAREL (13.0ms)[0m  [1mINSERT INTO `users` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `authentication_token`, `name`, `user_name`, `company_name`, `receive_emails`, `created_at`, `updated_at`) VALUES ('visitor@a.com', '$2a$10$S7YM4c36fR6KqWXqXqylkOWCSd46Qx.rct79mjfIfLjxuK2XKPRam', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, '2011-09-27 16:45:55', NULL, NULL, NULL, NULL, NULL, NULL, '2011-09-27 16:45:56', '2011-09-27 16:45:56')[0m
+  [1m[35mSQL (7.0ms)[0m  describe `services`
+  [1m[36mAREL (12.0ms)[0m  [1mINSERT INTO `services` (`user_id`, `provider`, `uid`, `uname`, `uemail`, `created_at`, `updated_at`) VALUES (2, 'twitter', '330011188', 'nouman khalid', 'visitor@a.com', '2011-09-27 16:45:56', '2011-09-27 16:45:56')[0m
+  [1m[35mSQL (44.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.0ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2011-09-27 16:45:56', `current_sign_in_at` = '2011-09-27 16:45:56', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2011-09-27 16:45:56' WHERE `users`.`id` = 2
+  [1m[36mSQL (25.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1279ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-27 21:45:56 +0500
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mProfile Load (3.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/profiles/new
+Completed 302 Found in 285ms
+
+
+Started GET "/profiles/new" for 127.0.0.1 at 2011-09-27 21:45:57 +0500
+  Processing by ProfilesController#new as HTML
+  [1m[35mUser Load (2.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered profiles/_form.html.erb (31.0ms)
+Rendered profiles/new.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 440ms (Views: 106.0ms | ActiveRecord: 137.0ms)
+
+
+Started GET "/sign_out" for 127.0.0.1 at 2011-09-27 21:46:12 +0500
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 681ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-27 21:46:13 +0500
+  Processing by HomeController#index as HTML
+Completed   in 65ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 21:46:14 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (4.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 197ms (Views: 88.0ms | ActiveRecord: 2.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/e_champ/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/e_champ/config/environment.rb:5)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 21:51:05 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (5.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (324.0ms)
+Completed 200 OK in 538ms (Views: 473.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2011-09-27 21:52:00 +0500
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2011-09-27 21:53:24 +0500
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 21:53:49 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (6.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 369ms (Views: 105.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2011-09-27 21:55:29 +0500
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-09-27 21:55:40 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 272ms (Views: 125.0ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/e_champ/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/e_champ/config/environment.rb:5)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2011-09-27 22:01:57 +0500
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/e_champ/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/e_champ/config/environment.rb:5)
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (12.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20110628165433)
+Migrating to CreateServices (20110703075854)
+Migrating to CreateRoles (20110924052036)
+Migrating to CreateRolesUser (20110924052350)
+Migrating to CreateProfiles (20110924052638)
+Migrating to CreateEvents (20110924053139)
+Migrating to CreateTickets (20110925122119)
+Migrating to CreateEventsAttendees (20110925124801)
+  [1m[35mSQL (259.0ms)[0m  CREATE TABLE `events_attendees` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (74.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110925124801')[0m
+  [1m[35mSQL (22.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (5.0ms)[0m  [1mdescribe `events`[0m
+  [1m[35mSQL (15.0ms)[0m  SHOW KEYS FROM `events`
+  [1m[36mSQL (5.0ms)[0m  [1mdescribe `events_attendees`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `events_attendees`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `profiles`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `profiles`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `roles`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `roles`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `roles_users`[0m
+  [1m[35mSQL (13.0ms)[0m  SHOW KEYS FROM `roles_users`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `services`[0m
+  [1m[35mSQL (3.0ms)[0m  SHOW KEYS FROM `services`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `tickets`[0m
+  [1m[35mSQL (2.0ms)[0m  SHOW KEYS FROM `tickets`
+  [1m[36mSQL (5.0ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (2.0ms)[0m  SHOW KEYS FROM `users`
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/e_champ/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/e_champ/config/environment.rb:5)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-09-28 04:10:14 +0500
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FL9JmrDNOTj7fyZ+GTVfCQ7hrnh2yE48vSd7xJbT32I=", "user"=>{"user_name"=>"nouman", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+DEPRECATION WARNING: It seems that you are using a custom SessionsController. In order for it to work from Devise 1.4.6 forward, you need to add the following:
+
+  prepend_before_filter :allow_params_authentication!, :only => :create
+
+This will ensure your controller can authenticate from params for the create action. (called from create at D:/ROR Projs/e_champ/app/controllers/devise/sessions_controller.rb:14)
+  [1m[36mSQL (32.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (83.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_name` = 'nouman' LIMIT 1
+  [1m[36mSQL (2.0ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (159.0ms)[0m  UPDATE `users` SET `current_sign_in_at` = '2011-09-27 23:10:25', `sign_in_count` = 2, `updated_at` = '2011-09-27 23:10:25' WHERE `users`.`id` = 1
+  [1m[36mSQL (74.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2422ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-28 04:10:26 +0500
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (30.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (59.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 339ms (Views: 29.0ms | ActiveRecord: 89.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2011-09-28 04:10:35 +0500
+  Processing by EventsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mRole Load (72.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (72.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mEvent Load (79.0ms)[0m  SELECT `events`.* FROM `events`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+Rendered events/index.html.erb within layouts/application (99.0ms)
+Completed 500 Internal Server Error in 592ms
+
+ActionView::Template::Error (undefined local variable or method `event' for #<#<Class:0x4d1d458>:0x4d19528>):
+    15: 
+    16: 
+    17: <br />
+    18: <% if is_admin? || (is_promoter? && current_user.id == event.user_id) %>
+    19:   <%= link_to 'New Event', new_event_path %>
+    20: <% end %>
+    21: 
+  app/views/events/index.html.erb:18:in `_app_views_events_index_html_erb___1007926483_40419120__912460295'
+  app/controllers/events_controller.rb:26:in `index'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (135.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2011-09-28 04:29:07 +0500
+  Processing by EventsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (1.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mEvent Load (1.0ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+Rendered events/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 223ms (Views: 39.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/events/fetch_pages?id=all" for 127.0.0.1 at 2011-09-28 04:29:09 +0500
+  Processing by EventsController#fetch_pages as HTML
+  Parameters: {"id"=>"all"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mEvent Load (1.0ms)[0m  SELECT `events`.* FROM `events`
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+Rendered events/_list.html.erb (68.0ms)
+Completed 200 OK in 221ms (Views: 78.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2011-09-28 04:29:21 +0500
+  Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (1.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+  [1m[36mEvent Load (1.0ms)[0m  [1mSELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mRole Load (1.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+Rendered events/show.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 427ms (Views: 113.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2011-09-28 04:33:24 +0500
+  Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mEvent Load (1.0ms)[0m  SELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+Rendered events/show.html.erb within layouts/application (47.0ms)
+Completed 500 Internal Server Error in 290ms
+
+ActionView::Template::Error (undefined method `attendees' for #<Event:0x67a71f8>):
+    101:   <%= link_to 'Edit', edit_event_path(@event) %> |
+    102: <% end %>
+    103: <%= link_to 'Back', events_path %> 
+    104: <% if @event.attendees.to_i < @event.number_of_tickets.to_i %>
+    105:   |
+    106:   <%= link_to 'Tickets' %>
+    107: <% end %>
+  app/views/events/show.html.erb:104:in `_app_views_events_show_html_erb__677103946_39383592__912460295'
+  app/controllers/events_controller.rb:39:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/e_champ/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/e_champ/config/environment.rb:5)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2011-09-28 04:38:07 +0500
+  Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (6.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (14.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mEvent Load (1.0ms)[0m  SELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+Rendered events/show.html.erb within layouts/application (297.0ms)
+Completed 500 Internal Server Error in 1566ms
+
+ActionView::Template::Error (undefined method `attendees' for #<Event:0x508eca8>):
+    101:   <%= link_to 'Edit', edit_event_path(@event) %> |
+    102: <% end %>
+    103: <%= link_to 'Back', events_path %> 
+    104: <% if @event.attendees.to_i < @event.number_of_tickets.to_i %>
+    105:   |
+    106:   <%= link_to 'Tickets' %>
+    107: <% end %>
+  app/views/events/show.html.erb:104:in `_app_views_events_show_html_erb__744306411_34084608_609664268'
+  app/controllers/events_controller.rb:39:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (35.0ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2011-09-28 04:38:41 +0500
+  Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (1.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+Rendered events/show.html.erb within layouts/application (52.0ms)
+Completed 500 Internal Server Error in 342ms
+
+ActionView::Template::Error (undefined method `attendees' for #<Event:0x4a7c948>):
+    101:   <%= link_to 'Edit', edit_event_path(@event) %> |
+    102: <% end %>
+    103: <%= link_to 'Back', events_path %> 
+    104: <% if @event.attendees.to_i < @event.number_of_tickets.to_i %>
+    105:   |
+    106:   <%= link_to 'Tickets' %>
+    107: <% end %>
+  app/views/events/show.html.erb:104:in `_app_views_events_show_html_erb__744306411_32410188_609664268'
+  app/controllers/events_controller.rb:39:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (85.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/e_champ/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/e_champ/config/environment.rb:5)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/e_champ/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/e_champ/config/environment.rb:5)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2011-09-28 04:55:52 +0500
+  Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (78.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mEvent Load (0.0ms)[0m  SELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+Rendered events/show.html.erb within layouts/application (508.0ms)
+Completed 500 Internal Server Error in 1790ms
+
+ActionView::Template::Error (Could not find the source association(s) :attendee or :attendees in model EventsAttendee.  Try 'has_many :attendees, :through => :events_attendees, :source => <name>'.  Is it one of :user or :event?):
+    101:   <%= link_to 'Edit', edit_event_path(@event) %> |
+    102: <% end %>
+    103: <%= link_to 'Back', events_path %> 
+    104: <% if @event.attendees.to_i < @event.number_of_tickets.to_i %>
+    105:   |
+    106:   <%= link_to 'Tickets' %>
+    107: <% end %>
+  app/views/events/show.html.erb:104:in `_app_views_events_show_html_erb__578449315_35185068_1043469384'
+  app/controllers/events_controller.rb:39:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.0ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2011-09-28 04:56:25 +0500
+  Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (0.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+  [1m[36mEvent Load (1.0ms)[0m  [1mSELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TABLES[0m
+Rendered events/show.html.erb within layouts/application (81.0ms)
+Completed 500 Internal Server Error in 330ms
+
+ActionView::Template::Error (undefined method `to_i' for Attendee(Table doesn't exist):Class):
+    101:   <%= link_to 'Edit', edit_event_path(@event) %> |
+    102: <% end %>
+    103: <%= link_to 'Back', events_path %> 
+    104: <% if @event.attendees.to_i < @event.number_of_tickets.to_i %>
+    105:   |
+    106:   <%= link_to 'Tickets' %>
+    107: <% end %>
+  app/views/events/show.html.erb:104:in `_app_views_events_show_html_erb__578449315_40824072_1043469384'
+  app/controllers/events_controller.rb:39:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.0ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2011-09-28 04:56:48 +0500
+  Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mEvent Load (1.0ms)[0m  SELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+Rendered events/show.html.erb within layouts/application (70.0ms)
+Completed 500 Internal Server Error in 358ms
+
+ActionView::Template::Error (Table 'e_champ_dev.attendees' doesn't exist):
+    101:   <%= link_to 'Edit', edit_event_path(@event) %> |
+    102: <% end %>
+    103: <%= link_to 'Back', events_path %> 
+    104: <% if @event.attendees.size < @event.number_of_tickets.to_i %>
+    105:   |
+    106:   <%= link_to 'Tickets' %>
+    107: <% end %>
+  app/views/events/show.html.erb:104:in `_app_views_events_show_html_erb__578449315_37992012_1043469384'
+  app/controllers/events_controller.rb:39:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (40.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/e_champ/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/e_champ/config/environment.rb:5)
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (2.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (23.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20110628165433)
+Migrating to CreateServices (20110703075854)
+Migrating to CreateRoles (20110924052036)
+Migrating to CreateRolesUser (20110924052350)
+Migrating to CreateProfiles (20110924052638)
+Migrating to CreateEvents (20110924053139)
+Migrating to CreateTickets (20110925122119)
+Migrating to CreateEventsAttendees (20110925124801)
+Migrating to CreateAttendees (20110927234226)
+  [1m[35mSQL (222.0ms)[0m  CREATE TABLE `attendees` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `contact_number` varchar(255), `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (33.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110927234226')[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `attendees`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `attendees`
+  [1m[36mSQL (5.0ms)[0m  [1mdescribe `events`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `events`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `events_attendees`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `events_attendees`
+  [1m[36mSQL (3.0ms)[0m  [1mdescribe `profiles`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `profiles`
+  [1m[36mSQL (3.0ms)[0m  [1mdescribe `roles`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `roles`
+  [1m[36mSQL (5.0ms)[0m  [1mdescribe `roles_users`[0m
+  [1m[35mSQL (2.0ms)[0m  SHOW KEYS FROM `roles_users`
+  [1m[36mSQL (5.0ms)[0m  [1mdescribe `services`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `services`
+  [1m[36mSQL (3.0ms)[0m  [1mdescribe `tickets`[0m
+  [1m[35mSQL (3.0ms)[0m  SHOW KEYS FROM `tickets`
+  [1m[36mSQL (6.0ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `users`
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/e_champ/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/e_champ/config/environment.rb:5)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2011-09-28 05:04:44 +0500
+  Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mEvent Load (1.0ms)[0m  SELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mSQL (87.0ms)[0m  [1mSELECT COUNT(*) FROM `attendees` INNER JOIN `events_attendees` ON `attendees`.id = `events_attendees`.attendee_id WHERE ((`events_attendees`.event_id = 1))[0m
+Mysql::Error: Unknown column 'events_attendees.event_id' in 'where clause': SELECT COUNT(*) FROM `attendees` INNER JOIN `events_attendees` ON `attendees`.id = `events_attendees`.attendee_id WHERE ((`events_attendees`.event_id = 1))
+Rendered events/show.html.erb within layouts/application (968.1ms)
+Completed 500 Internal Server Error in 3450ms
+
+ActionView::Template::Error (Mysql::Error: Unknown column 'events_attendees.event_id' in 'where clause': SELECT COUNT(*) FROM `attendees` INNER JOIN `events_attendees` ON `attendees`.id = `events_attendees`.attendee_id WHERE ((`events_attendees`.event_id = 1))):
+    101:   <%= link_to 'Edit', edit_event_path(@event) %> |
+    102: <% end %>
+    103: <%= link_to 'Back', events_path %> 
+    104: <% if @event.attendees.size < @event.number_of_tickets.to_i %>
+    105:   |
+    106:   <%= link_to 'Tickets' %>
+    107: <% end %>
+  app/views/events/show.html.erb:104:in `_app_views_events_show_html_erb__1067930704_32731836_998910300'
+  app/controllers/events_controller.rb:39:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (22.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (77.0ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2011-09-28 05:07:31 +0500
+  Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mEvent Load (0.0ms)[0m  SELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM `attendees` INNER JOIN `events_attendees` ON `attendees`.id = `events_attendees`.attendee_id WHERE ((`events_attendees`.event_id = 1))[0m
+Mysql::Error: Unknown column 'events_attendees.event_id' in 'where clause': SELECT COUNT(*) FROM `attendees` INNER JOIN `events_attendees` ON `attendees`.id = `events_attendees`.attendee_id WHERE ((`events_attendees`.event_id = 1))
+Rendered events/show.html.erb within layouts/application (80.0ms)
+Completed 500 Internal Server Error in 340ms
+
+ActionView::Template::Error (Mysql::Error: Unknown column 'events_attendees.event_id' in 'where clause': SELECT COUNT(*) FROM `attendees` INNER JOIN `events_attendees` ON `attendees`.id = `events_attendees`.attendee_id WHERE ((`events_attendees`.event_id = 1))):
+    101:   <%= link_to 'Edit', edit_event_path(@event) %> |
+    102: <% end %>
+    103: <%= link_to 'Back', events_path %> 
+    104: <% if @event.attendees.size < @event.number_of_tickets.to_i %>
+    105:   |
+    106:   <%= link_to 'Tickets' %>
+    107: <% end %>
+  app/views/events/show.html.erb:104:in `_app_views_events_show_html_erb__1067930704_37465284_998910300'
+  app/controllers/events_controller.rb:39:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (100.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/e_champ/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/e_champ/config/environment.rb:5)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2011-09-28 05:10:28 +0500
+  Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mEvent Load (1.0ms)[0m  SELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mSQL (2.0ms)[0m  [1mSELECT COUNT(*) FROM `attendees` INNER JOIN `events_attendees` ON `attendees`.id = `events_attendees`.attendee_id WHERE ((`events_attendees`.event_id = 1))[0m
+Mysql::Error: Unknown column 'events_attendees.event_id' in 'where clause': SELECT COUNT(*) FROM `attendees` INNER JOIN `events_attendees` ON `attendees`.id = `events_attendees`.attendee_id WHERE ((`events_attendees`.event_id = 1))
+Rendered events/show.html.erb within layouts/application (667.0ms)
+Completed 500 Internal Server Error in 2544ms
+
+ActionView::Template::Error (Mysql::Error: Unknown column 'events_attendees.event_id' in 'where clause': SELECT COUNT(*) FROM `attendees` INNER JOIN `events_attendees` ON `attendees`.id = `events_attendees`.attendee_id WHERE ((`events_attendees`.event_id = 1))):
+    101:   <%= link_to 'Edit', edit_event_path(@event) %> |
+    102: <% end %>
+    103: <%= link_to 'Back', events_path %> 
+    104: <% if @event.attendees.size < @event.number_of_tickets.to_i %>
+    105:   |
+    106:   <%= link_to 'Tickets' %>
+    107: <% end %>
+  app/views/events/show.html.erb:104:in `_app_views_events_show_html_erb__499694472_32404392__994865677'
+  app/controllers/events_controller.rb:39:in `show'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (49.0ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2011-09-28 05:13:50 +0500
+  Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mEvent Load (0.0ms)[0m  SELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (2.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mSQL (64.0ms)[0m  [1mSELECT COUNT(*) FROM `attendees` INNER JOIN `events_attendees` ON `attendees`.id = `events_attendees`.attendee_id WHERE ((`events_attendees`.event_id = 1))[0m
+Rendered events/show.html.erb within layouts/application (173.0ms)
+Completed 200 OK in 426ms (Views: 132.0ms | ActiveRecord: 70.0ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2011-09-28 06:20:12 +0500
+  Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (2.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mEvent Load (0.0ms)[0m  SELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM `attendees` INNER JOIN `events_attendees` ON `attendees`.id = `events_attendees`.attendee_id WHERE ((`events_attendees`.event_id = 1))[0m
+Rendered events/show.html.erb within layouts/application (123.0ms)
+Completed 200 OK in 418ms (Views: 147.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/tickets?e_id=1" for 127.0.0.1 at 2011-09-28 06:25:55 +0500
+  Processing by TicketsController#index as HTML
+  Parameters: {"e_id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 500 Internal Server Error in 72ms
+
+NameError (undefined local variable or method `check_profile' for #<TicketsController:0x52d39a0>):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (65.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (80.0ms)
+
+
+Started GET "/tickets?e_id=1" for 127.0.0.1 at 2011-09-28 06:26:25 +0500
+  Processing by TicketsController#index as HTML
+  Parameters: {"e_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (1.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+  [1m[36mTicket Load (1.0ms)[0m  [1mSELECT `tickets`.* FROM `tickets` WHERE (event_is = '1')[0m
+Mysql::Error: Unknown column 'event_is' in 'where clause': SELECT `tickets`.* FROM `tickets` WHERE (event_is = '1')
+Completed 500 Internal Server Error in 141ms
+
+ActiveRecord::StatementInvalid (Mysql::Error: Unknown column 'event_is' in 'where clause': SELECT `tickets`.* FROM `tickets` WHERE (event_is = '1')):
+  app/controllers/tickets_controller.rb:10:in `index'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.0ms)
+
+
+Started GET "/tickets?e_id=1" for 127.0.0.1 at 2011-09-28 06:26:41 +0500
+  Processing by TicketsController#index as HTML
+  Parameters: {"e_id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mTicket Load (0.0ms)[0m  SELECT `tickets`.* FROM `tickets` WHERE (event_id = '1')
+Redirected to http://localhost:3000/events
+Completed 302 Found in 161ms
+
+
+Started GET "/events" for 127.0.0.1 at 2011-09-28 06:26:42 +0500
+  Processing by EventsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (1.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mRole Load (1.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+Rendered events/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 242ms (Views: 37.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/events/fetch_pages?id=all" for 127.0.0.1 at 2011-09-28 06:26:43 +0500
+  Processing by EventsController#fetch_pages as HTML
+  Parameters: {"id"=>"all"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mEvent Load (2.0ms)[0m  SELECT `events`.* FROM `events`
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+Rendered events/_list.html.erb (185.0ms)
+Completed 200 OK in 371ms (Views: 198.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2011-09-28 06:33:41 +0500
+  Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (1.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1[0m
+  [1m[35mRole Load (1.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM `attendees` INNER JOIN `events_attendees` ON `attendees`.id = `events_attendees`.attendee_id WHERE ((`events_attendees`.event_id = 1))
+Rendered events/show.html.erb within layouts/application (142.0ms)
+Completed 200 OK in 391ms (Views: 168.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/tickets?e_id=1" for 127.0.0.1 at 2011-09-28 06:33:45 +0500
+  Processing by TicketsController#index as HTML
+  Parameters: {"e_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (0.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT `tickets`.* FROM `tickets` WHERE (event_id = '1')[0m
+Redirected to http://localhost:3000/events
+Completed 302 Found in 93ms
+
+
+Started GET "/events" for 127.0.0.1 at 2011-09-28 06:33:45 +0500
+  Processing by EventsController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mRole Load (1.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mEvent Load (2.0ms)[0m  SELECT `events`.* FROM `events`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+Rendered events/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 359ms (Views: 38.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/events/fetch_pages?id=all" for 127.0.0.1 at 2011-09-28 06:33:46 +0500
+  Processing by EventsController#fetch_pages as HTML
+  Parameters: {"id"=>"all"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (1.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  [1m[35mRole Load (1.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mRole Load (4.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+Rendered events/_list.html.erb (80.0ms)
+Completed 200 OK in 308ms (Views: 91.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2011-09-28 06:44:38 +0500
+  Processing by EventsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mRole Load (1.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mEvent Load (1.0ms)[0m  SELECT `events`.* FROM `events`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+Rendered events/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 218ms (Views: 36.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/events/fetch_pages?id=all" for 127.0.0.1 at 2011-09-28 06:44:40 +0500
+  Processing by EventsController#fetch_pages as HTML
+  Parameters: {"id"=>"all"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (0.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+  [1m[36mEvent Load (1.0ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+Rendered events/_list.html.erb (76.0ms)
+Completed 200 OK in 450ms (Views: 88.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2011-09-28 06:45:15 +0500
+  Processing by EventsController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mRole Load (1.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mEvent Load (1.0ms)[0m  SELECT `events`.* FROM `events`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+Rendered events/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 223ms (Views: 38.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/events/fetch_pages?id=all" for 127.0.0.1 at 2011-09-28 06:45:16 +0500
+  Processing by EventsController#fetch_pages as HTML
+  Parameters: {"id"=>"all"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (1.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+Rendered events/_list.html.erb (67.0ms)
+Completed 200 OK in 441ms (Views: 293.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/tickets/new?e_id=1" for 127.0.0.1 at 2011-09-28 06:45:20 +0500
+  Processing by TicketsController#new as HTML
+  Parameters: {"e_id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`name` = 'Admin' AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`name` = 'EventPromoter' AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 766ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-28 06:45:21 +0500
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 112ms (Views: 29.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tickets/new" for 127.0.0.1 at 2011-09-28 06:45:42 +0500
+  Processing by TicketsController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`name` = 'Admin' AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`name` = 'EventPromoter' AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 278ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-28 06:45:42 +0500
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 110ms (Views: 29.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tickets/new?e_id=1" for 127.0.0.1 at 2011-09-28 06:46:05 +0500
+  Processing by TicketsController#new as HTML
+  Parameters: {"e_id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Rendered tickets/_form.html.erb (17.0ms)
+Rendered tickets/new.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 243ms (Views: 51.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/tickets/new?e_id=1" for 127.0.0.1 at 2011-09-28 06:47:18 +0500
+  Processing by TicketsController#new as HTML
+  Parameters: {"e_id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Rendered tickets/_form.html.erb (19.0ms)
+Rendered tickets/new.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 242ms (Views: 52.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tickets/new?e_id=1" for 127.0.0.1 at 2011-09-28 06:51:03 +0500
+  Processing by TicketsController#new as HTML
+  Parameters: {"e_id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Rendered tickets/_form.html.erb (15.0ms)
+Rendered tickets/new.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 188ms (Views: 49.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tickets/new?e_id=1" for 127.0.0.1 at 2011-09-28 06:51:16 +0500
+  Processing by TicketsController#new as HTML
+  Parameters: {"e_id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Rendered tickets/_form.html.erb (14.0ms)
+Rendered tickets/new.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 245ms (Views: 48.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2011-09-28 06:51:20 +0500
+  Processing by TicketsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FL9JmrDNOTj7fyZ+GTVfCQ7hrnh2yE48vSd7xJbT32I=", "ticket"=>{"cost"=>"12", "type"=>"das", "design"=>"custom"}, "commit"=>"Create Ticket"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Completed 500 Internal Server Error in 99ms
+
+NameError (undefined local variable or method `curren_user' for #<TicketsController:0x67aa480>):
+  app/controllers/tickets_controller.rb:58:in `create'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.0ms)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2011-09-28 06:51:38 +0500
+  Processing by TicketsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FL9JmrDNOTj7fyZ+GTVfCQ7hrnh2yE48vSd7xJbT32I=", "ticket"=>{"cost"=>"12", "type"=>"das", "design"=>"custom"}, "commit"=>"Create Ticket"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mEvent Load (0.0ms)[0m  SELECT `events`.* FROM `events` WHERE `events`.`id` = 1 LIMIT 1
+WARNING: Can't mass-assign protected attributes: type
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  describe `tickets`
+  [1m[36mAREL (17.0ms)[0m  [1mINSERT INTO `tickets` (`user_id`, `event_id`, `cost`, `type`, `attendee`, `barcode`, `design`, `created_at`, `updated_at`) VALUES (1, 1, 12, NULL, NULL, NULL, 'custom', '2011-09-28 01:51:38', '2011-09-28 01:51:38')[0m
+  [1m[35mSQL (55.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/tickets/1
+Completed 302 Found in 370ms
+
+
+Started GET "/tickets/1" for 127.0.0.1 at 2011-09-28 06:51:38 +0500
+  Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (0.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`id` = 1 LIMIT 1[0m
+Rendered tickets/show.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 246ms (Views: 44.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2011-09-28 06:52:06 +0500
+  Processing by EventsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mEvent Load (0.0ms)[0m  SELECT `events`.* FROM `events`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+Rendered events/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 243ms (Views: 42.0ms | ActiveRecord: 78.0ms)
+
+
+Started GET "/events/fetch_pages?id=all" for 127.0.0.1 at 2011-09-28 06:52:07 +0500
+  Processing by EventsController#fetch_pages as HTML
+  Parameters: {"id"=>"all"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (0.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+Rendered events/_list.html.erb (66.0ms)
+Completed 200 OK in 225ms (Views: 77.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tickets/new?e_id=2" for 127.0.0.1 at 2011-09-28 06:52:09 +0500
+  Processing by TicketsController#new as HTML
+  Parameters: {"e_id"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Rendered tickets/_form.html.erb (15.0ms)
+Rendered tickets/new.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 145ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2011-09-28 06:52:15 +0500
+  Processing by TicketsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FL9JmrDNOTj7fyZ+GTVfCQ7hrnh2yE48vSd7xJbT32I=", "ticket"=>{"cost"=>"11", "type"=>"1231", "design"=>"custom"}, "commit"=>"Create Ticket"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mEvent Load (0.0ms)[0m  SELECT `events`.* FROM `events` WHERE `events`.`id` = 2 LIMIT 1
+WARNING: Can't mass-assign protected attributes: type
+WARNING: Can't mass-assign protected attributes: type
+WARNING: Can't mass-assign protected attributes: type
+WARNING: Can't mass-assign protected attributes: type
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.0ms)[0m  describe `tickets`
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO `tickets` (`user_id`, `event_id`, `cost`, `type`, `attendee`, `barcode`, `design`, `created_at`, `updated_at`) VALUES (1, 2, 11, NULL, NULL, NULL, 'custom', '2011-09-28 01:52:15', '2011-09-28 01:52:15')[0m
+  [1m[35mSQL (80.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/tickets/2
+Completed 302 Found in 333ms
+
+
+Started GET "/tickets/2" for 127.0.0.1 at 2011-09-28 06:52:15 +0500
+  Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (0.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+  [1m[36mTicket Load (1.0ms)[0m  [1mSELECT `tickets`.* FROM `tickets` WHERE `tickets`.`id` = 2 LIMIT 1[0m
+Rendered tickets/show.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 140ms (Views: 42.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2011-09-28 06:53:37 +0500
+  Processing by EventsController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mRole Load (1.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mEvent Load (1.0ms)[0m  SELECT `events`.* FROM `events`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+Rendered events/index.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 300ms (Views: 99.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/events/fetch_pages?id=all" for 127.0.0.1 at 2011-09-28 06:53:38 +0500
+  Processing by EventsController#fetch_pages as HTML
+  Parameters: {"id"=>"all"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (0.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+  [1m[36mEvent Load (1.0ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mRole Load (1.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+Rendered events/_list.html.erb (268.0ms)
+Completed 200 OK in 489ms (Views: 276.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/tickets/new?e_id=2" for 127.0.0.1 at 2011-09-28 06:53:40 +0500
+  Processing by TicketsController#new as HTML
+  Parameters: {"e_id"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Rendered tickets/_form.html.erb (15.0ms)
+Rendered tickets/new.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 378ms (Views: 232.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2011-09-28 06:53:45 +0500
+  Processing by TicketsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FL9JmrDNOTj7fyZ+GTVfCQ7hrnh2yE48vSd7xJbT32I=", "ticket"=>{"cost"=>"11", "type"=>"1231", "design"=>"custom"}, "commit"=>"Create Ticket"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mEvent Load (0.0ms)[0m  SELECT `events`.* FROM `events` WHERE `events`.`id` = 2 LIMIT 1
+WARNING: Can't mass-assign protected attributes: type
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.0ms)[0m  describe `tickets`
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO `tickets` (`user_id`, `event_id`, `cost`, `type`, `attendee`, `barcode`, `design`, `created_at`, `updated_at`) VALUES (1, 2, 11, NULL, NULL, NULL, 'custom', '2011-09-28 01:53:45', '2011-09-28 01:53:45')[0m
+  [1m[35mSQL (80.0ms)[0m  COMMIT
+WARNING: Can't mass-assign protected attributes: type
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO `tickets` (`user_id`, `event_id`, `cost`, `type`, `attendee`, `barcode`, `design`, `created_at`, `updated_at`) VALUES (1, 2, 11, NULL, NULL, NULL, 'custom', '2011-09-28 01:53:45', '2011-09-28 01:53:45')
+  [1m[36mSQL (26.0ms)[0m  [1mCOMMIT[0m
+WARNING: Can't mass-assign protected attributes: type
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO `tickets` (`user_id`, `event_id`, `cost`, `type`, `attendee`, `barcode`, `design`, `created_at`, `updated_at`) VALUES (1, 2, 11, NULL, NULL, NULL, 'custom', '2011-09-28 01:53:45', '2011-09-28 01:53:45')[0m
+  [1m[35mSQL (52.0ms)[0m  COMMIT
+WARNING: Can't mass-assign protected attributes: type
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO `tickets` (`user_id`, `event_id`, `cost`, `type`, `attendee`, `barcode`, `design`, `created_at`, `updated_at`) VALUES (1, 2, 11, NULL, NULL, NULL, 'custom', '2011-09-28 01:53:45', '2011-09-28 01:53:45')
+  [1m[36mSQL (20.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/tickets/6
+Completed 302 Found in 761ms
+
+
+Started GET "/tickets/6" for 127.0.0.1 at 2011-09-28 06:53:46 +0500
+  Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mTicket Load (1.0ms)[0m  SELECT `tickets`.* FROM `tickets` WHERE `tickets`.`id` = 6 LIMIT 1
+Rendered tickets/show.html.erb within layouts/application (283.0ms)
+Completed 200 OK in 400ms (Views: 306.0ms | ActiveRecord: 2.0ms)

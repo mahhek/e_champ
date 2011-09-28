@@ -6,6 +6,15 @@ class ApplicationController < ActionController::Base
   def check_permissions
     authorize! :create, :resource
   end
+
+  def check_profile
+    unless params[:controller] == "profiles" && params[:action] == "new"
+      if current_user && current_user.profile.blank?
+        flash[:notice] = "Please Create your profile first!"
+        redirect_to :controller => "profiles", :action => "new"
+      end
+    end
+  end
   
   def after_sign_in_path_for(resource_or_scope)
     home_path = "/home"

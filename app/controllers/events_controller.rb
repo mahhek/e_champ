@@ -7,15 +7,6 @@ class EventsController < ApplicationController
   before_filter :check_profile
   before_filter :check_permissions, :only => [:edit,:new, :create,:destroy]
   
-  def check_profile
-    unless params[:controller] == "profiles" && params[:action] == "new"
-      if current_user && current_user.profile.blank?
-        flash[:notice] = "Please Create your profile first!"
-        redirect_to :controller => "profiles", :action => "new"
-      end
-    end
-  end
-
   def index
     if is_admin?
       @events = Event.all

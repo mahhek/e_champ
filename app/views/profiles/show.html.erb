@@ -20,6 +20,11 @@
   <%= raw(@profile.biography) %>
 </p>
 
+<p>
+  <b>Profile Picture:</b>
+  <img src="/images/photos/<%= @profile.id %>/thumb/<%= @profile.photo_file_name %>" alt="Profile Pic"/>
+</p>
+
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>

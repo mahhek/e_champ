@@ -9,7 +9,7 @@ class ProfilesController < ApplicationController
 
     respond_to do |format|
       format.html
-#      format.json { render json: @profiles }
+      #      format.json { render json: @profiles }
     end
   end
 
@@ -17,10 +17,14 @@ class ProfilesController < ApplicationController
   # GET /profiles/1.json
   def show
     @profile = current_user.profile
-
-    respond_to do |format|
-      format.html # show.html.erb
-#      format.json { render json: @profile }
+    if @profile.blank?
+      flash[:notice] = "Please create your profile first!"
+      redirect_to :controller => "profiles", :action => "new"
+    else
+      respond_to do |format|
+        format.html # show.html.erb
+        #      format.json { render json: @profile }
+      end
     end
   end
 
@@ -31,13 +35,13 @@ class ProfilesController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-#      format.json { render json: @profile }
+      #      format.json { render json: @profile }
     end
   end
 
   # GET /profiles/1/edit
   def edit
-#    @profile = Profile.find(params[:id])
+    #    @profile = Profile.find(params[:id])
     @profile = current_user.profile
   end
 
