@@ -7469,3 +7469,221 @@ Migrating to CreateAttendees (20110927234226)
   [1m[36mSQL (0.8ms)[0m  [1mdescribe `users`[0m
   [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `users`
 DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/hamid/e_champ/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /home/hamid/e_champ/config/environment.rb:5)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/echamp/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/echamp/config/environment.rb:5)
+  [1m[36mSQL (302.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (63.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20110628165433)
+Migrating to CreateServices (20110703075854)
+Migrating to CreateRoles (20110924052036)
+Migrating to CreateRolesUser (20110924052350)
+Migrating to CreateProfiles (20110924052638)
+Migrating to CreateEvents (20110924053139)
+Migrating to CreateTickets (20110925122119)
+Migrating to CreateEventsAttendees (20110925124801)
+Migrating to CreateAttendees (20110927234226)
+  [1m[35mSQL (8.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `attendees`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `attendees`
+  [1m[36mSQL (5.0ms)[0m  [1mdescribe `events`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `events`
+  [1m[36mSQL (5.0ms)[0m  [1mdescribe `events_attendees`[0m
+  [1m[35mSQL (2.0ms)[0m  SHOW KEYS FROM `events_attendees`
+  [1m[36mSQL (5.0ms)[0m  [1mdescribe `profiles`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `profiles`
+  [1m[36mSQL (5.0ms)[0m  [1mdescribe `roles`[0m
+  [1m[35mSQL (2.0ms)[0m  SHOW KEYS FROM `roles`
+  [1m[36mSQL (4.0ms)[0m  [1mdescribe `roles_users`[0m
+  [1m[35mSQL (4.0ms)[0m  SHOW KEYS FROM `roles_users`
+  [1m[36mSQL (5.0ms)[0m  [1mdescribe `services`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `services`
+  [1m[36mSQL (5.0ms)[0m  [1mdescribe `tickets`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `tickets`
+  [1m[36mSQL (5.0ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `users`
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/echamp/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/echamp/config/environment.rb:5)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/echamp/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/echamp/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-01 00:26:44 +0500
+  Processing by HomeController#index as HTML
+  [1m[36mSQL (3.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (84.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 2897ms (Views: 96.0ms | ActiveRecord: 88.0ms)
+
+
+Started GET "/sign_out" for 127.0.0.1 at 2011-10-01 00:28:02 +0500
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSQL (2.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3001/
+Completed 302 Found in 603ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-01 00:28:03 +0500
+  Processing by HomeController#index as HTML
+Completed   in 59ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-10-01 00:28:04 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (5.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 292ms (Views: 113.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2011-10-01 00:29:23 +0500
+
+
+Started GET "/auth/twitter/callback?oauth_token=BJv2eJD5WSH5ox3Kc0QW83DODtcNeFD6Jzi942dzw&oauth_verifier=0emMArp5I9o29kzx9ebtG26IygEw71PMG1yy0C6c" for 127.0.0.1 at 2011-10-01 00:29:31 +0500
+  Processing by ServicesController#create as HTML
+  Parameters: {"oauth_token"=>"BJv2eJD5WSH5ox3Kc0QW83DODtcNeFD6Jzi942dzw", "oauth_verifier"=>"0emMArp5I9o29kzx9ebtG26IygEw71PMG1yy0C6c", "service"=>"twitter"}
+  [1m[36mService Load (1.0ms)[0m  [1mSELECT `services`.* FROM `services` WHERE `services`.`provider` = 'twitter' AND `services`.`uid` = '330011188' LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'visitor@a.com' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.0ms)[0m  describe `services`
+  [1m[36mAREL (84.0ms)[0m  [1mINSERT INTO `services` (`user_id`, `provider`, `uid`, `uname`, `uemail`, `created_at`, `updated_at`) VALUES (2, 'twitter', '330011188', 'nouman khalid', 'visitor@a.com', '2011-09-30 19:29:34', '2011-09-30 19:29:34')[0m
+  [1m[35mSQL (129.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (2.0ms)[0m  UPDATE `users` SET `current_sign_in_at` = '2011-09-30 19:29:35', `sign_in_count` = 2, `updated_at` = '2011-09-30 19:29:35' WHERE `users`.`id` = 2
+  [1m[36mSQL (41.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3001/
+Completed 302 Found in 622ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-01 00:29:35 +0500
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 2) LIMIT 1[0m
+Redirected to http://localhost:3001/profiles/new
+Completed 302 Found in 203ms
+
+
+Started GET "/profiles/new" for 127.0.0.1 at 2011-10-01 00:29:39 +0500
+  Processing by ProfilesController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Rendered profiles/_form.html.erb (57.0ms)
+Rendered profiles/new.html.erb within layouts/application (90.0ms)
+Completed 200 OK in 427ms (Views: 158.0ms | ActiveRecord: 264.0ms)
+
+
+Started GET "/sign_out" for 127.0.0.1 at 2011-10-01 00:31:59 +0500
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (5.0ms)[0m  BEGIN
+  [1m[36mSQL (6.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3001/
+Completed 302 Found in 150ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-01 00:32:01 +0500
+  Processing by HomeController#index as HTML
+Completed   in 70ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-10-01 00:32:01 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (5.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 304ms (Views: 111.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2011-10-01 00:32:55 +0500
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/echamp/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/echamp/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-03 18:31:56 +0500
+  Processing by HomeController#index as HTML
+Completed   in 0ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-10-03 18:32:05 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (115.0ms)
+Completed 200 OK in 1379ms (Views: 209.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-10-03 18:32:27 +0500
+  Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mRole Load (223.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name != 'Admin')[0m
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (306.0ms)
+Completed 200 OK in 1315ms (Views: 332.0ms | ActiveRecord: 223.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-10-03 18:33:41 +0500
+  Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mRole Load (1.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name != 'Admin')
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (93.0ms)
+Completed 200 OK in 171ms (Views: 118.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2011-10-03 18:39:39 +0500
+
+
+Started GET "/services/create" for 127.0.0.1 at 2011-10-03 18:48:24 +0500
+
+ActionController::RoutingError (No route matches "/services/create"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/services/create" for 127.0.0.1 at 2011-10-03 18:48:39 +0500
+
+ActionController::RoutingError (No route matches "/services/create"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/echamp/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/echamp/config/environment.rb:5)
+
+
+Started GET "/services/create" for 127.0.0.1 at 2011-10-03 18:50:34 +0500
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ServicesController):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.0ms)
+
+
+Started GET "/services/create" for 127.0.0.1 at 2011-10-03 18:51:21 +0500
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ServicesController):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/echamp/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/echamp/config/environment.rb:5)
+
+
+Started GET "/services/create" for 127.0.0.1 at 2011-10-03 18:57:30 +0500
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ServicesController):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (2.0ms)
+
+
+Started GET "/services/create" for 127.0.0.1 at 2011-10-03 18:58:23 +0500
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ServicesController):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.0ms)
+
+
+Started GET "/services/create" for 127.0.0.1 at 2011-10-03 18:59:41 +0500
+
+AbstractController::ActionNotFound (The action 'show' could not be found for ServicesController):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2011-10-03 19:00:03 +0500

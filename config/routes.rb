@@ -1,6 +1,7 @@
 EChamp::Application.routes.draw do
 
   resources :tickets
+  resources :services
 
   resources :events do
     collection do
@@ -14,6 +15,7 @@ EChamp::Application.routes.draw do
   match 'events' => "events#index"
   match "get_ticket/:id" => "events#ticket"
   match "search" => "events#search"
+  match "services/create" => "services#create"
 
   match '/auth/:service/callback' => 'services#create'
   devise_for :users
