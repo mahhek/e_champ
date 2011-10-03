@@ -8414,3 +8414,6 @@ Started GET "/profiles" for 127.0.0.1 at 2011-10-03 20:44:51 +0500
   [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles`[0m
 Rendered profiles/index.html.erb within layouts/application (68.0ms)
 Completed 200 OK in 164ms (Views: 94.0ms | ActiveRecord: 2.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at D:/ROR Projs/echamp/config/environment.rb:5)
+DEPRECATION WARNING: ActionController::Base.consider_all_requests_local= is deprecated. Please configure it on your application with config.consider_all_requests_local=. (called from <top (required)> at D:/ROR Projs/echamp/config/environment.rb:5)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/echamp/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/echamp/config/environment.rb:5)
