@@ -7687,3 +7687,230 @@ Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.10/lib/action_dispat
 
 
 Started GET "/auth/facebook" for 127.0.0.1 at 2011-10-03 19:00:03 +0500
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/echamp/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/echamp/config/environment.rb:5)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-10-03 19:04:08 +0500
+  Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name != 'Admin')[0m
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (260.0ms)
+Completed 200 OK in 881ms (Views: 292.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-10-03 19:05:51 +0500
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9+XybwCzkESAKwksRat237wPtVcBXdiYC0kDUr8Vwzw=", "user"=>{"email"=>"noumankhalid786@gmail.com", "name"=>"nouman", "user_name"=>"nouman", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "company_name"=>"nouman"}, "role_id"=>"3", "commit"=>"Sign up"}
+  [1m[35mRole Load (1.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name != 'Admin')
+  [1m[36mSQL (55.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (108.0ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'noumankhalid786@gmail.com') LIMIT 1
+  [1m[36mSQL (3.0ms)[0m  [1mROLLBACK[0m
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 678ms (Views: 72.0ms | ActiveRecord: 167.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-10-03 19:06:41 +0500
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9+XybwCzkESAKwksRat237wPtVcBXdiYC0kDUr8Vwzw=", "user"=>{"email"=>"noumankhalid786@yahoo.com", "name"=>"nouman", "user_name"=>"nouman", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "company_name"=>"nouman"}, "role_id"=>"2", "commit"=>"Sign up"}
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name != 'Admin')
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'noumankhalid786@yahoo.com') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`confirmation_token` = '74csYB3p5BPMrXQ4uToJ' LIMIT 1
+  [1m[36mSQL (16.0ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (36.0ms)[0m  INSERT INTO `users` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `authentication_token`, `name`, `user_name`, `company_name`, `receive_emails`, `created_at`, `updated_at`) VALUES ('noumankhalid786@yahoo.com', '$2a$10$4GW4Mv4tcNIfbMHpBUhokuwcDlsWkqw62rFFIXq0ZXeEQjRkPd7rm', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '74csYB3p5BPMrXQ4uToJ', NULL, '2011-10-03 14:06:41', NULL, 'nouman', 'nouman', 'nouman', NULL, '2011-10-03 14:06:41', '2011-10-03 14:06:41')
+Rendered devise/mailer/confirmation_instructions.html.erb (2.0ms)
+
+Sent mail to noumankhalid786@yahoo.com (1627ms)
+Date: Mon, 03 Oct 2011 19:06:43 +0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: noumankhalid786@yahoo.com
+Message-ID: <4e89c173ab643_22b82985b7c987fb@nouman-PC.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome noumankhalid786@yahoo.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=74csYB3p5BPMrXQ4uToJ">Confirm my account</a></p>
+  [1m[36mSQL (86.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mRole Load (16.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE `roles`.`id` = 2 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.0ms)[0m  describe `roles_users`
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO `roles_users` (`role_id`, `user_id`, `created_at`, `updated_at`) VALUES (2, 3, '2011-10-03 14:06:45', '2011-10-03 14:06:45')[0m
+  [1m[35mSQL (34.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 4186ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-03 19:06:45 +0500
+  Processing by HomeController#index as HTML
+Completed   in 32ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-10-03 19:06:45 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 96ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-10-03 19:19:38 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 102ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-10-03 19:19:38 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 110ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-10-03 19:19:39 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 142ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-10-03 19:20:02 +0500
+  Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name != 'Admin')[0m
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (287.0ms)
+Completed 200 OK in 361ms (Views: 310.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-10-03 19:20:40 +0500
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9+XybwCzkESAKwksRat237wPtVcBXdiYC0kDUr8Vwzw=", "user"=>{"email"=>"noumankhalid786@yahoo.com", "name"=>"nouman", "user_name"=>"nouman", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "company_name"=>"nouman"}, "role_id"=>"2", "commit"=>"Sign up"}
+  [1m[35mRole Load (1.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name != 'Admin')
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'noumankhalid786@yahoo.com') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`user_name` = BINARY 'nouman') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'noumankhalid786@yahoo.com') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mROLLBACK[0m
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 255ms (Views: 58.0ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-10-03 19:29:24 +0500
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9+XybwCzkESAKwksRat237wPtVcBXdiYC0kDUr8Vwzw=", "user"=>{"email"=>"noumankhalid786@yahoo.com", "name"=>"nouman", "user_name"=>"nouman1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "company_name"=>"nouman"}, "role_id"=>"2", "commit"=>"Sign up"}
+  [1m[35mRole Load (1.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name != 'Admin')
+  [1m[36mSQL (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'noumankhalid786@yahoo.com') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`user_name` = BINARY 'nouman1') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'noumankhalid786@yahoo.com') LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`confirmation_token` = 'UihQkNqkSghzWFYfknx8' LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  describe `users`
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO `users` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `authentication_token`, `name`, `user_name`, `company_name`, `receive_emails`, `created_at`, `updated_at`) VALUES ('noumankhalid786@yahoo.com', '$2a$10$Lr/v7p5N1QhcjywIeCYiG.fSyHnb9g0jkJtIMwU7Dl5dRdv7ga/RS', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 'UihQkNqkSghzWFYfknx8', NULL, '2011-10-03 14:29:24', NULL, 'nouman', 'nouman1', 'nouman', NULL, '2011-10-03 14:29:24', '2011-10-03 14:29:24')[0m
+Rendered devise/mailer/confirmation_instructions.html.erb (1.0ms)
+
+Sent mail to noumankhalid786@yahoo.com (991ms)
+Date: Mon, 03 Oct 2011 19:29:24 +0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: noumankhalid786@yahoo.com
+Message-ID: <4e89c6c48f081_22b834b4a4c988c7@nouman-PC.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome noumankhalid786@yahoo.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=UihQkNqkSghzWFYfknx8">Confirm my account</a></p>
+  [1m[35mSQL (68.0ms)[0m  COMMIT
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (2.0ms)[0m  [1mdescribe `roles_users`[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO `roles_users` (`role_id`, `user_id`, `created_at`, `updated_at`) VALUES (2, 4, '2011-10-03 14:29:25', '2011-10-03 14:29:25')
+  [1m[36mSQL (56.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1510ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-03 19:29:25 +0500
+  Processing by HomeController#index as HTML
+Completed   in 30ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-10-03 19:29:25 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 139ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-10-03 19:44:11 +0500
+  Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mRole Load (1.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name != 'Admin')
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 215ms (Views: 119.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-10-03 19:44:28 +0500
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9+XybwCzkESAKwksRat237wPtVcBXdiYC0kDUr8Vwzw=", "user"=>{"email"=>"noumankhalid786@yahoo.com", "name"=>"nouman1", "user_name"=>"nouman1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "company_name"=>"nouman"}, "role_id"=>"2", "commit"=>"Sign up"}
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name != 'Admin')[0m
+  [1m[35mSQL (1.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'noumankhalid786@yahoo.com') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `users` WHERE (`users`.`user_name` = BINARY 'nouman1') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM `users` WHERE (`users`.`email` = BINARY 'noumankhalid786@yahoo.com') LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`confirmation_token` = 'YWq3zJqi7aDS878qTyRT' LIMIT 1
+  [1m[36mSQL (2.0ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO `users` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `confirmation_token`, `confirmed_at`, `confirmation_sent_at`, `authentication_token`, `name`, `user_name`, `company_name`, `receive_emails`, `created_at`, `updated_at`) VALUES ('noumankhalid786@yahoo.com', '$2a$10$sBnGQMe5.uX9uwOzZK8ka.u4SyjCGj/JJQsGQLSs901id9Ot2blpq', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, 'YWq3zJqi7aDS878qTyRT', NULL, '2011-10-03 14:44:28', NULL, 'nouman1', 'nouman1', 'nouman', NULL, '2011-10-03 14:44:28', '2011-10-03 14:44:28')
+Rendered devise/mailer/confirmation_instructions.html.erb (1.0ms)
+
+Sent mail to noumankhalid786@yahoo.com (858ms)
+Date: Mon, 03 Oct 2011 19:44:29 +0500
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: noumankhalid786@yahoo.com
+Message-ID: <4e89ca4d10037_22b8275d3b4989b6@nouman-PC.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome noumankhalid786@yahoo.com!</p>
+
+<p>You can confirm your account through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=YWq3zJqi7aDS878qTyRT">Confirm my account</a></p>
+  [1m[36mSQL (28.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE `roles`.`id` = 2 LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  describe `roles_users`
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO `roles_users` (`role_id`, `user_id`, `created_at`, `updated_at`) VALUES (2, 5, '2011-10-03 14:44:29', '2011-10-03 14:44:29')[0m
+  [1m[35mSQL (41.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 1274ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-03 19:44:30 +0500
+  Processing by HomeController#index as HTML
+Completed   in 31ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-10-03 19:44:30 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 105ms (Views: 42.0ms | ActiveRecord: 0.0ms)
