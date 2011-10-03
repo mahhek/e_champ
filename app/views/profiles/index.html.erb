@@ -14,9 +14,9 @@
 <% @profiles.each do |profile| %>
   <tr>
     <td><%= profile.hometown %></td>
-    <td><%= profile.interests %></td>
-    <td><%= profile.education %></td>
-    <td><%= profile.biography %></td>
+    <td><%= raw(profile.interests) %></td>
+    <td><%= raw(profile.education) %></td>
+    <td><%= raw(profile.biography) %></td>
     <td><%= link_to 'Show', profile %></td>
     <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
     <td><%= link_to 'Destroy', profile, confirm: 'Are you sure?', method: :delete %></td>

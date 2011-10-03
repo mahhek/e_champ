@@ -16,6 +16,7 @@ EChamp::Application.routes.draw do
   match "get_ticket/:id" => "events#ticket"
   match "search" => "events#search"
   match "services/create" => "services#create"
+#  match "users" => "home#index"
 
   match '/auth/:service/callback' => 'services#create'
   devise_for :users
