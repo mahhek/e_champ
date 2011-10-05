@@ -1,6 +1,9 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'rubygems'
+require 'tlsmail'
+Net::SMTP.enable_tls( OpenSSL::SSL::VERIFY_NONE)
 
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
