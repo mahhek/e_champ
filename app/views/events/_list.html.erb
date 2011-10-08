@@ -77,7 +77,7 @@
               <td><%= event.group_event %></td>
               <td><%= event.video_link %></td>
               <td><%= link_to 'Show', event %></td>
-              <% if is_admin? || (is_promoter? && current_user.id == event.user_id) || current_user.id == event.user_id %>
+              <% if is_admin? || current_user.id == event.user_id %>
                 <td><%= link_to 'Edit', edit_event_path(event) %></td>
                 <td><%= link_to 'Destroy', event, confirm: 'Are you sure?', method: :delete %></td>
                 <td><%= link_to 'Generate Tickets', "/tickets/new?e_id=#{event.id}" %></td>

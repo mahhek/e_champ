@@ -4,18 +4,20 @@ class Ability
   def initialize(user)
     if user.role? :Admin
       can :manage, :all
-    elsif user.role? :EventPromoter      
-      can :manage, Event do |event|
-        event.try(:owner) == user
-      end
-      can :manage, Ticket do |ticket|
-        ticket.try(:owner) == user
-      end
+    elsif user.role? :EventPromoter
+      can :manage, :all
+      #      can :manage, Event do |event|
+      #        event.try(:owner) == user
+      #      end
+      #      can :manage, Ticket do |ticket|
+      #        ticket.try(:owner) == user
+      #      end
     elsif user.role? :Customer
-      can :read, [Event,Ticket]
-      can :manage, Event do |event|
-        event.try(:owner) == user
-      end
+      can :manage, :all
+      #      can :read, [Event,Ticket]
+      #      can :manage, Event do |event|
+      #        event.try(:owner) == user
+      #      end
 
       # Define abilities for the passed in user here. For example:
       #

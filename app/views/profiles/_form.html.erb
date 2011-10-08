@@ -17,19 +17,19 @@
   </div>
   <div class="field">
     <%= f.label :interests %><br />
-    <textarea name="profile[interests]" class="mceEditor" rows="3" cols="50" >
+    <textarea name="profile[interests]" rows="3" cols="50" maxlength="160" >
       <%= raw(@profile.interests) %>
     </textarea>
   </div>
   <div class="field">
     <%= f.label :education %><br />
-    <textarea name="profile[education]" class="mceEditor" rows="3" cols="50" >
+    <textarea name="profile[education]" rows="3" cols="50" >
       <%= raw(@profile.education) %>
     </textarea>    
   </div>
   <div class="field">
     <%= f.label :biography %><br />  
-    <textarea name="profile[biography]" class="mceEditor" rows="3" cols="50" >
+    <textarea name="profile[biography]" rows="3" cols="50" maxlength="160" >
       <%= raw(@profile.biography) %>
     </textarea>
   </div>

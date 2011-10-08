@@ -8516,3 +8516,187 @@ Rendered devise/sessions/new.html.erb within layouts/application (14.6ms)
 Completed 200 OK in 140ms (Views: 31.4ms | ActiveRecord: 0.0ms)
 =======
 >>>>>>> 81876f719b27be3a9e4332cf54fa11a25d332e45
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at D:/ROR Projs/echamp/config/environment.rb:5)
+DEPRECATION WARNING: ActionController::Base.consider_all_requests_local= is deprecated. Please configure it on your application with config.consider_all_requests_local=. (called from <top (required)> at D:/ROR Projs/echamp/config/environment.rb:5)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: D:/ROR Projs/echamp/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at D:/ROR Projs/echamp/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-08 08:05:38 +0500
+  Processing by HomeController#index as HTML
+Completed   in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-10-08 08:05:47 +0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (3.0ms)
+Rendered devise/sessions/new.html.erb within layouts/application (130.0ms)
+Completed 200 OK in 1400ms (Views: 198.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-10-08 08:07:08 +0500
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SUv+UK6/zJLQ5wfIFibM9JmAZOl17Agh5N9rI9U8sKo=", "user"=>{"user_name"=>"nouman", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+DEPRECATION WARNING: It seems that you are using a custom SessionsController. In order for it to work from Devise 1.4.6 forward, you need to add the following:
+
+  prepend_before_filter :allow_params_authentication!, :only => :create
+
+This will ensure your controller can authenticate from params for the create action. (called from create at D:/ROR Projs/echamp/app/controllers/devise/sessions_controller.rb:14)
+  [1m[36mSQL (19.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (81.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_name` = 'nouman' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (82.0ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2011-10-05 18:51:52', `current_sign_in_at` = '2011-10-08 03:07:09', `sign_in_count` = 4, `updated_at` = '2011-10-08 03:07:09' WHERE `users`.`id` = 1
+  [1m[36mSQL (78.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1728ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-08 08:07:10 +0500
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (47.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (123.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 472ms (Views: 34.0ms | ActiveRecord: 170.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2011-10-08 08:07:12 +0500
+  Processing by EventsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (2.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mRole Load (54.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (89.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mEvent Load (155.0ms)[0m  SELECT `events`.* FROM `events` WHERE (user_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+Rendered events/index.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 664ms (Views: 95.0ms | ActiveRecord: 301.0ms)
+
+
+Started GET "/events/fetch_pages?id=all" for 127.0.0.1 at 2011-10-08 08:07:13 +0500
+  Processing by EventsController#fetch_pages as HTML
+  Parameters: {"id"=>"all"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (1.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+  [1m[36mEvent Load (1.0ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+Rendered events/_list.html.erb (371.0ms)
+Completed 200 OK in 533ms (Views: 383.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2011-10-08 08:07:35 +0500
+  Processing by EventsController#new as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`name` = 'Admin' AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`name` = 'EventPromoter' AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+Rendered events/_form.html.erb (62.0ms)
+Rendered events/new.html.erb within layouts/application (114.0ms)
+Completed 200 OK in 520ms (Views: 145.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2011-10-08 08:27:01 +0500
+  Processing by EventsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mEvent Load (1.0ms)[0m  SELECT `events`.* FROM `events`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+Rendered events/index.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 306ms (Views: 102.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/events/fetch_pages?id=all" for 127.0.0.1 at 2011-10-08 08:27:02 +0500
+  Processing by EventsController#fetch_pages as HTML
+  Parameters: {"id"=>"all"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (1.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+  [1m[36mEvent Load (0.0ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+Rendered events/_list.html.erb (295.0ms)
+Completed 200 OK in 463ms (Views: 305.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2011-10-08 08:37:42 +0500
+  Processing by EventsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+  [1m[35mRole Load (3.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mEvent Load (1.0ms)[0m  SELECT `events`.* FROM `events`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1
+  [1m[36mRole Load (1.0ms)[0m  [1mSELECT `roles`.* FROM `roles` WHERE (name = 'EventPromoter') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 3 AND ((`roles_users`.user_id = 1)) LIMIT 1
+Rendered events/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 254ms (Views: 38.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/events/fetch_pages?id=all" for 127.0.0.1 at 2011-10-08 08:37:43 +0500
+  Processing by EventsController#fetch_pages as HTML
+  Parameters: {"id"=>"all"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProfile Load (0.0ms)[0m  SELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1
+  [1m[36mEvent Load (1.0ms)[0m  [1mSELECT `events`.* FROM `events`[0m
+  [1m[35mRole Load (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `roles`.* FROM `roles` WHERE (name = 'Admin') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE `roles`.`id` = 1 AND ((`roles_users`.user_id = 1)) LIMIT 1[0m
+Rendered events/_list.html.erb (162.0ms)
+Completed 200 OK in 342ms (Views: 224.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/profiles/show" for 127.0.0.1 at 2011-10-08 08:42:47 +0500
+  Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Rendered profiles/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 229ms (Views: 36.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/profiles/show" for 127.0.0.1 at 2011-10-08 08:49:23 +0500
+  Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Rendered profiles/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 227ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profiles/1/edit" for 127.0.0.1 at 2011-10-08 08:49:25 +0500
+  Processing by ProfilesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Rendered profiles/_form.html.erb (277.0ms)
+Rendered profiles/edit.html.erb within layouts/application (293.0ms)
+Completed 200 OK in 400ms (Views: 321.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/profiles/1/edit" for 127.0.0.1 at 2011-10-08 09:08:23 +0500
+  Processing by ProfilesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT `profiles`.* FROM `profiles` WHERE (`profiles`.user_id = 1) LIMIT 1[0m
+Rendered profiles/_form.html.erb (27.0ms)
+Rendered profiles/edit.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 202ms (Views: 72.0ms | ActiveRecord: 1.0ms)
