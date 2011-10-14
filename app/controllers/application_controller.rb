@@ -26,8 +26,6 @@ class ApplicationController < ActionController::Base
     redirect_to root_url
   end
 
-
-
   def is_admin?
     if current_user
       admin_role = Role.find(:first, :conditions => ["name = ?", "Admin"])

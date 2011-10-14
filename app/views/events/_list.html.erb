@@ -32,23 +32,15 @@
   <table>
     <tr>
       <th>Name</th>
-      <th>Description</th>
-      <th>Number of events</th>
       <th>Start date</th>
       <th>End date</th>
-      <th>Restrictions</th>
       <th>Location</th>
       <th>Address</th>
       <th>Web address</th>
       <th>Number of tickets</th>
-      <th>Ticket type</th>
       <th>Max order tickets</th>
-      <th>Keywords</th>
-      <th>Discount code</th>
-      <th>Qr code</th>
-      <th>Group event</th>
-      <th>Video link</th>
       <th></th>
+
       <th></th>
       <th></th>
     </tr>
@@ -59,23 +51,15 @@
 
           <% @events.each do |event| %>
             <tr>
-              <td><%= event.name %></td>
-              <td><%= raw(event.description) %></td>
-              <td><%= event.number_of_events %></td>
-              <td><%= event.start_date %></td>
-              <td><%= event.end_date %></td>
-              <td><%= raw(event.restrictions) %></td>
-              <td><%= event.location %></td>
-              <td><%= event.address %></td>
-              <td><%= event.web_address %></td>
-              <td><%= event.number_of_tickets %></td>
-              <td><%= event.ticket_type %></td>
-              <td><%= event.max_order_tickets %></td>
-              <td><%= raw(event.keywords) %></td>
-              <td><%= event.discount_code %></td>
-              <td><%= event.qr_code %></td>
-              <td><%= event.group_event %></td>
-              <td><%= event.video_link %></td>
+              <td style="text-align: center;"><%= event.name.blank? ? " - " : event.name %></td>
+              <td style="text-align: center;"><%= event.start_date.blank? ? " - " : event.start_date %></td>
+              <td style="text-align: center;"><%= event.end_date.blank? ? " - " : event.end_date %></td>
+              <td style="text-align: center;"><%= event.location.blank? ? " - " : event.location %></td>
+              <td style="text-align: center;"><%= event.address.blank? ? " - " : event.address %></td>
+              <td style="text-align: center;"><%= event.web_address.blank? ? " - " : event.web_address %></td>
+              <td style="text-align: center;"><%= event.number_of_tickets.blank? ? " - " : event.number_of_tickets %></td>
+              <td style="text-align: center;"><%= event.max_order_tickets.blank? ? " - " : event.max_order_tickets %></td>
+              
               <td><%= link_to 'Show', event %></td>
               <% if is_admin? || current_user.id == event.user_id %>
                 <td><%= link_to 'Edit', edit_event_path(event) %></td>

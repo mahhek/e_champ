@@ -8,7 +8,7 @@ class TicketsController < ApplicationController
   def index
     unless params[:e_id].blank?
       @tickets = Ticket.all(:conditions => ["event_id = ?",params[:e_id]])
-      if @ticket.blank?
+      if @tickets.blank?
         flash[:notice] = "No Tickets available for this Event!"
         redirect_to :controller => "events", :action => "index"
       else

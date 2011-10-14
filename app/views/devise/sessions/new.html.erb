@@ -1,34 +1,59 @@
-<section id="deviseauth">
+<div id="wrapper">
+  <br />
+  <br />
+  <br />
+  <div class="login_text"><img src="images/login.png" width="74" height="28" alt=""></div>
+  <section id="deviseauth">
 
-  <div id="local" class="box">
-    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-      <p><%= f.label :user_name %><br />
-        <%= f.text_field :user_name %></p>
+    <div id="local" class="box">
+      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+        <div class="login">
+          <div class="column">
+            <%= f.label :user_name, :class=> "label" %>
+            <%= f.text_field :user_name, :class => "text" %>
+          </div>
 
-      <p><%= f.label :password %><br/>
-        <%= f.password_field :password %></p>
+          <div class="column">
+            <%= f.label :password, :class=> "label" %>
+            <%= f.password_field :password, :class => "text"  %></div>
+          <div class="column1">
+            <% if devise_mapping.rememberable? %>
+              <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
+            <% end %>
+              <%= f.submit "", :class => "button" %>
+          </div>
 
-      <% if devise_mapping.rememberable? %>
-        <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
+          <div class="clear"></div>   <div class="line"></div>
+          <div class="column1"><h1>Don't have an account yet ? <span><a href="/sign_up">SIGN UP</a></span></h1>
+            <p>Want to attend an event?</p>
+            <a href="/event_search" class="button1" value="" name="event"></a>
+          </div>
+
+          
+        </div>
       <% end %>
 
-      <p><%= f.submit "Sign in" %></p>
-    <% end %>
-  </div>
 
-  <div id="remote">
-    <div id="services" class="box">
-      <a href="/auth/facebook" class="services"><%= image_tag "facebook_64.png", :size => "194x25", :alt => "Facebook" %>        </a>
+      <div id="devise_links">
+        <%= render :partial => "devise/shared/links" %>
+      </div>
+
     </div>
-  </div>
 
-  <div id="remote">
-    <div id="services" class="box">
-      <a href="/auth/twitter" class="services"><%= image_tag "twitter-signin.png", :size => "194x25", :alt => "Twitter Login" %>        </a>
-    </div>
-  </div>
+<%#*<div id="remote">%>
+<%#*<div id="services" class="box">%>
+<%#*<a href="/auth/facebook" class="services"><%= image_tag "facebook_64.png", :size => "194x25", :alt => "Facebook" %>
+<%#*</a>%>
+<%#*</div>%>
+<%#*</div>%>
 
-  <div id="devise_links">
-    <%= render :partial => "devise/shared/links" %>
-  </div>
-</section>
+<%#*<div id="remote">%>
+<%#*<div id="services" class="box">%>
+<%#*<a href="/auth/twitter" class="services"><%= image_tag "twitter-signin.png", :size => "194x25", :alt => "Twitter Login" %>       
+<%#*</a>%>
+<%#*</div>%>
+<%#*</div>%>
+
+
+  </section>
+</div>
