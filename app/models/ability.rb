@@ -2,18 +2,18 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    if user.role? :Admin
-      can :manage, :all
-    elsif user.role? :EventPromoter
-      can :manage, :all
-      #      can :manage, Event do |event|
-      #        event.try(:owner) == user
-      #      end
-      #      can :manage, Ticket do |ticket|
-      #        ticket.try(:owner) == user
-      #      end
-    elsif user.role? :Customer
-      can :manage, :all
+#    if user.role? :Admin
+#      can :manage, :all
+#    elsif user.role? :EventPromoter
+#      can :manage, :all
+#      #      can :manage, Event do |event|
+#      #        event.try(:owner) == user
+#      #      end
+#      #      can :manage, Ticket do |ticket|
+#      #        ticket.try(:owner) == user
+#      #      end
+#    elsif user.role? :Customer
+#      can :manage, :all
       #      can :read, [Event,Ticket]
       #      can :manage, Event do |event|
       #        event.try(:owner) == user
@@ -41,6 +41,6 @@ class Ability
       #   can :update, Article, :published => true
       #
       # See the wiki for details: https://github.com/ryanb/cancan/wiki/Defining-Abilities
-    end
+#    end
   end
 end

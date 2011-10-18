@@ -3,7 +3,8 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :lockable, :timeoutable and :activatable
   # :confirmable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :confirmable, :authentication_keys => [:user_name]
+         :recoverable, :rememberable, :trackable, :validatable, :confirmable
+#         :recoverable, :rememberable, :trackable, :validatable, :confirmable, :authentication_keys => [:user_name]
 
   # Setup accessible (or protected) attributes for your model
 
@@ -14,11 +15,11 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :user_name, :company_name, :receive_email, :age_limit
 
-  validates :user_name, :uniqueness => true
+#  validates :user_name, :uniqueness => true
   validates :email, :uniqueness => true
 
-  has_many :roles_user
-  has_many :roles, :through => :roles_user
+#  has_many :roles_user
+#  has_many :roles, :through => :roles_user
 
   has_one :profile
 
@@ -39,9 +40,9 @@ class User < ActiveRecord::Base
     end
   end
 
-  def role?(role)
-    return !!self.roles.find_by_name(role.to_s)
-  end
+#  def role?(role)
+#    return !!self.roles.find_by_name(role.to_s)
+#  end
 
 
 end

@@ -4,10 +4,10 @@ class CreateTickets < ActiveRecord::Migration
       t.integer :user_id
       t.integer :event_id
       t.integer :cost
-      t.string :type
-      t.string :attendee
-      t.text :barcode
-      t.string :design
+      t.string  :ticket_type
+      t.string  :attendee
+      t.text    :barcode
+      t.string  :design
 
       t.timestamps
     end

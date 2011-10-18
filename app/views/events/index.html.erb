@@ -1,33 +1,35 @@
-<%= stylesheet_link_tag "jquery/jquery.alerts", "jquery/pagination" %>
-<%= javascript_include_tag "jquery/jquery.alerts", "jquery/jquery.pagination" %>
+<div id="wrapper">
+  <%= stylesheet_link_tag "jquery/jquery.alerts", "jquery/pagination" %>
+  <%= javascript_include_tag "jquery/jquery.alerts", "jquery/jquery.pagination" %>
 
-<div style="margin-left: 35px;">
-  <% ('A'..'Z').each do |l| %>
-    <label style="cursor: pointer;margin-right: 10px;font-weight: bold;" onclick="getPages('<%= l %>')"><%= l %></label>
-  <% end %>
-  <label style="cursor: pointer;margin-right: 10px;font-weight: bold;" onclick="getPages('all')">All</label>
-</div>
+  <div style="margin-left: 35px;">
+    <% ('A'..'Z').each do |l| %>
+      <label style="cursor: pointer;margin-right: 10px;font-weight: bold;" onclick="getPages('<%= l %>')"><%= l %></label>
+    <% end %>
+    <label style="cursor: pointer;margin-right: 10px;font-weight: bold;" onclick="getPages('all')">All</label>
+  </div>
 
-<h1>Listing events</h1>
-<div id="page_list" style="float:left;width: 100%" class="full_width">
+  <h1>Listing events</h1>
+  <div id="page_list" style="float:left;width: 100%" class="full_width">
 <%#= render :partial => "list" %>
-</div>
+  </div>
 
-<br />
+  <br />
 <%# if is_admin? || is_promoter?  %>
   <%= link_to 'New Event', new_event_path %>
 <%# end %>
 
-<script type="text/javascript">
-  function getPages(val) {
-    var container = $("#page_list");
-    $.ajax({
-      url: '/events/fetch_pages?id=' + val, type: 'get', dataType: 'html',
-      processData: false,
-      success: function(data) {
-        container.html(data);
-      }
-    });
-  }
-  getPages("all");
-</script>
+  <script type="text/javascript">
+    function getPages(val) {
+      var container = $("#page_list");
+      $.ajax({
+        url: '/events/fetch_pages?id=' + val, type: 'get', dataType: 'html',
+        processData: false,
+        success: function(data) {
+          container.html(data);
+        }
+      });
+    }
+    getPages("all");
+  </script>
+</div>

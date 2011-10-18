@@ -6,7 +6,7 @@
     <%= javascript_include_tag :defaults %>
     <%= csrf_meta_tag %>
     <%= stylesheet_link_tag "style" %>
-    
+
   </head>
   <body>
     <div id="outer">
@@ -21,7 +21,7 @@
             <form action="/search">
               <input type="submit" name="submit" value="" class="btn" />
               <input name="q" type="text" class="box"/>
-              <%#*<input type="submit" value="Search" name="event" />%>
+<%#*<input type="submit" value="Search" name="event" />%>
             </form>            
           </div>
         </div>
@@ -36,13 +36,25 @@
             <li>
               <a href="/help">HELP</a>
             </li>
-            <li>
-              <a href="/sign_in">SIGNUP / LOGIN</a>
-            </li>
+
+            <% if current_user.blank? %>
+              <li>
+                <a href="/sign_in">SIGNUP / LOGIN</a>
+              </li>
+            <% else %>
+              <li>
+                <a href="/sign_out">SIGN OUT</a>
+              </li>
+            <% end %>
           </ul>
         </div>
       </div>
-
+      <% unless current_user.blank? %>
+        <%= link_to "Events", "/events" %>
+        <%= link_to "Profile", "/profiles/show" %>        
+  <%# else %>
+  <%#= link_to "Sign In", "/sign_in" %>
+      <% end %>
       <%= yield %>
 
       <div id="footer"><div class="f_menu"><ul class="menu"><li><a href="#">About Event Champion</a></li><li><a href="#">Contact</a></li><li><a href="#">Jobs</a></li><li><a href="#">Pricing</a></li><li><a href="#">Referral Program</a></li><li><a href="#">Press</a></li></ul>

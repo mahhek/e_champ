@@ -17,8 +17,8 @@ class Devise::RegistrationsController < ApplicationController
     build_resource
 
     if resource.save
-      role = Role.find(params['role_id'])
-      @user.roles << role
+#      role = Role.find(params['role_id'])
+#      @user.roles << role
       if resource.active_for_authentication?
         set_flash_message :notice, :signed_up if is_navigational_format?
         sign_in(resource_name, resource)

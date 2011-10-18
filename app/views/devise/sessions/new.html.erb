@@ -6,11 +6,15 @@
   <section id="deviseauth">
 
     <div id="local" class="box">
+
       <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
         <div class="login">
+          <div id="devise_links">
+            <%= render :partial => "devise/shared/links" %>
+          </div>
           <div class="column">
-            <%= f.label :user_name, :class=> "label" %>
-            <%= f.text_field :user_name, :class => "text" %>
+            <%= f.label :email, :class=> "label" %>
+            <%= f.text_field :email, :class => "text" %>
           </div>
 
           <div class="column">
@@ -20,7 +24,7 @@
             <% if devise_mapping.rememberable? %>
               <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
             <% end %>
-              <%= f.submit "", :class => "button" %>
+            <%= f.submit "", :class => "button" %>
           </div>
 
           <div class="clear"></div>   <div class="line"></div>
@@ -29,15 +33,9 @@
             <a href="/event_search" class="button1" value="" name="event"></a>
           </div>
 
-          
+
         </div>
       <% end %>
-
-
-      <div id="devise_links">
-        <%= render :partial => "devise/shared/links" %>
-      </div>
-
     </div>
 
 <%#*<div id="remote">%>

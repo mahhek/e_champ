@@ -57,12 +57,14 @@ class TicketsController < ApplicationController
     params[:ticket][:event_id] = session[:eve_id]
     params[:ticket][:user_id] = current_user.id
     event = Event.find(session[:eve_id])
+    
     unless event.blank?
       i = 0
       err = false
-      while i < event.number_of_tickets.to_i  do
+      count = event.number_of_tickets.to_i
+      while i < count  do
         @ticket = Ticket.new(params[:ticket])
-        i +=1;
+        i += 1
         unless @ticket.save
           err = true
         end

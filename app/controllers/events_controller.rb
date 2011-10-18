@@ -8,11 +8,11 @@ class EventsController < ApplicationController
   before_filter :check_permissions, :only => [:edit,:new, :create,:destroy]
   
   def index
-    if is_admin?
+#    if is_admin?
       @events = Event.all
-    else
-      @events = Event.all
-    end
+#    else
+#      @events = Event.all
+#    end
 
     respond_to do |format|
       format.html # index.html.erb

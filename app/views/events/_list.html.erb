@@ -61,11 +61,11 @@
               <td style="text-align: center;"><%= event.max_order_tickets.blank? ? " - " : event.max_order_tickets %></td>
               
               <td><%= link_to 'Show', event %></td>
-              <% if is_admin? || current_user.id == event.user_id %>
+              <%# if is_admin? || current_user.id == event.user_id %>
                 <td><%= link_to 'Edit', edit_event_path(event) %></td>
                 <td><%= link_to 'Destroy', event, confirm: 'Are you sure?', method: :delete %></td>
                 <td><%= link_to 'Generate Tickets', "/tickets/new?e_id=#{event.id}" %></td>
-              <% end %>
+              <%# end %>
             </tr>
           <% end %>
         </div>
