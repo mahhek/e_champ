@@ -5,7 +5,7 @@ class EventsController < ApplicationController
   helper :all  
   before_filter :authenticate_user!, :except => ["index","show","fetch_pages","get_ticket","ticket","search"]
   before_filter :check_profile
-  before_filter :check_permissions, :only => [:edit,:new, :create,:destroy]
+#  before_filter :check_permissions, :only => [:edit,:new, :create,:destroy]
   
   def index
 #    if is_admin?
