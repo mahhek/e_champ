@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -44,8 +45,8 @@ ActiveRecord::Schema.define(:version => 20110927234226) do
   end
 
   create_table "events_attendees", :force => true do |t|
-    t.integer  "attendee_id"
     t.integer  "event_id"
+    t.integer  "attendee_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -90,7 +91,7 @@ ActiveRecord::Schema.define(:version => 20110927234226) do
     t.integer  "user_id"
     t.integer  "event_id"
     t.integer  "cost"
-    t.string   "ticket_type"
+    t.string   "type"
     t.string   "attendee"
     t.text     "barcode"
     t.string   "design"

@@ -10,7 +10,7 @@ development:
   database: e_champ_dev
   pool: 5
   username: root
-  password: 123
+  password: 
   host: localhost
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -22,7 +22,7 @@ test:
   database: e_champ_test
   pool: 5
   username: root
-  password: 123
+  password: 
   host: localhost
 production:
   adapter: mysql
@@ -31,5 +31,5 @@ production:
   database: e_champ
   pool: 5
   username: root
-  password: 123
+  password: 
   host: localhost
